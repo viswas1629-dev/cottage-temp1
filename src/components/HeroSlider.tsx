@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { MapPin, ArrowRight, Sparkles } from 'lucide-react';
 import WhatsAppButton from './WhatsAppButton';
+import cotaFronts1 from '../assets/images/cota-fronts1.webp';
+import cotaBacks2 from '../assets/images/cota-backs2.webp';
+import cotaS3 from '../assets/images/cota-s3.webp';
+import cotaS4 from '../assets/images/cota-s4.webp';
 
 export interface HeroSlide {
   id: string;
@@ -13,28 +17,28 @@ export interface HeroSlide {
 const HERO_SLIDES: HeroSlide[] = [
   {
     id: "slide-1",
-    image: "https://images.unsplash.com/photo-1587061949409-02df41d5e562?auto=format&fit=crop&q=80&w=2000",
+    image: cotaFronts1,
     title: "A Quiet Escape Into Nature.",
     subtitle: "Experience private luxury cottages surrounded by misty pine forests and mountain tranquility.",
     location: "Upper Lake Road, Kodaikanal"
   },
   {
     id: "slide-2",
-    image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&q=80&w=2000",
+    image: cotaBacks2,
     title: "Timeless Comfort in the Hills.",
     subtitle: "Stone fireplaces, teakwood interiors, and floor-to-ceiling vistas of the Western Ghats.",
     location: "Pambarpuram Ridge, Kodaikanal"
   },
   {
     id: "slide-3",
-    image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&q=80&w=2000",
+    image: cotaS3,
     title: "Awaken Above the Clouds.",
     subtitle: "Step out onto your private veranda as morning fog gently rolls through the valley.",
     location: "Pine Valley Viewpoint"
   },
   {
     id: "slide-4",
-    image: "https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&q=80&w=2000",
+    image: cotaS4,
     title: "Fireside Evening Stargazing.",
     subtitle: "Gather around sunken stone fire pits beneath crystal clear, zero-light-pollution skies.",
     location: "Anto's Comfort Residence Grounds"
