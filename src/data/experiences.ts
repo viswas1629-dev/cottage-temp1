@@ -48,7 +48,7 @@ export const EXPERIENCES: Experience[] = [
     id: "exp-04",
     title: "Homely Dining Experience",
     subtitle: "Farm-fresh South Indian & Continental meals cooked with local mountain herbs.",
-    description: "Enjoy freshly prepared meals during your stay at the cottage. Food arrangements are available on advance request at the time of booking. Since the meals are prepared based on prior orders, last-minute food requests may not be possible.",
+    description: "Enjoy freshly prepared meals during your stay at the cottage. Food arrangements are available on advance request at the time of booking. Since the meals are prepared based on pre-orders, last-minute food requests may not be possible.",
     image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=1600",
     category: "Food Arrangements",
     duration: "On Request",

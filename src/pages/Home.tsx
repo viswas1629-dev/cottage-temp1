@@ -2,16 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Sparkles, Flame, Trees, Compass, ArrowRight, Coffee, Moon } from 'lucide-react';
 import HeroSlider from '../components/HeroSlider';
-import CottageCard from '../components/CottageCard';
+import BedroomCard from '../components/BedroomCard';
 import LocationMap from '../components/LocationMap';
 import WhatsAppButton from '../components/WhatsAppButton';
-import { COTTAGES } from '../data/cottages';
+import { BEDROOM_CATEGORIES } from '../data/bedrooms';
 import { EXPERIENCES } from '../data/experiences';
 import { GALLERY_ITEMS } from '../data/gallery';
 import { REVIEWS } from '../data/reviews';
 
 export const Home: React.FC = () => {
-  const featuredCottages = COTTAGES.filter(c => c.featured);
   const galleryPreview = GALLERY_ITEMS.slice(0, 6);
 
   return (
@@ -86,36 +85,26 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* 3. Featured Cottages / Rooms */}
-      <section className="py-20 bg-[#F4EFE6] border-y border-[#EAE2D5]">
+      {/* 3. Our Accommodation Section */}
+      <section id="accommodations" className="py-20 bg-[#F4EFE6] border-y border-[#EAE2D5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-            <div className="space-y-3 max-w-2xl">
-              <span className="text-xs font-mono uppercase tracking-widest text-[#C89D66] font-medium">
-                Our Accommodations
-              </span>
-              <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#1C201D]">
-                Explore Our Signature Rooms & Suites
-              </h2>
-              <p className="text-sm text-[#3D4540] font-sans font-light">
-                Select from 9 unique rooms — from glass chalets hovering over clouds to cozy stone fireplaces.
-              </p>
-            </div>
-
-            <Link
-              to="/cottages"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[#15291E] text-[#FAF7F2] hover:bg-[#1D3829] rounded-full text-sm font-semibold transition-all shadow-md self-start md:self-auto"
-            >
-              <span>View All 9 Cottages</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
+          <div className="text-center max-w-2xl mx-auto mb-14 space-y-3">
+            <span className="text-xs font-mono uppercase tracking-widest text-[#C89D66] font-medium">
+              OUR ACCOMMODATION
+            </span>
+            <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#1C201D]">
+              Choose Your Bedroom
+            </h2>
+            <p className="text-sm text-[#3D4540] font-sans font-light leading-relaxed">
+              Choose the bedroom type that best suits your stay and enquire with us directly on WhatsApp.
+            </p>
           </div>
 
-          {/* Cottage Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredCottages.map((cottage, index) => (
-              <CottageCard key={cottage.id} cottage={cottage} index={index} />
+          {/* 2-Column Bedroom Category Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {BEDROOM_CATEGORIES.map((bedroom, index) => (
+              <BedroomCard key={bedroom.id} bedroom={bedroom} index={index} />
             ))}
           </div>
 
@@ -291,13 +280,13 @@ export const Home: React.FC = () => {
           </div>
 
           <div className="mt-10 text-center">
-            <Link
-              to="/gallery"
-              className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#15291E] text-white hover:bg-[#1D3829] rounded-full text-sm font-semibold transition-all shadow-md"
+            <a
+              href="#accommodations"
+              className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#15291E] text-white hover:bg-[#1D3829] rounded-full text-sm font-semibold transition-all shadow-md cursor-pointer"
             >
-              <span>Open Full Photo Gallery</span>
+              <span>Explore Our Accommodations</span>
               <ArrowRight className="w-4 h-4" />
-            </Link>
+            </a>
           </div>
         </div>
       </section>

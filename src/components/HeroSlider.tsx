@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { MapPin, ArrowRight, Sparkles } from 'lucide-react';
 import WhatsAppButton from './WhatsAppButton';
 
@@ -113,13 +112,13 @@ export const HeroSlider: React.FC = () => {
 
         {/* CTA Button Group */}
         <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
-          <Link
-            to="/cottages"
-            className="w-full sm:w-auto px-8 py-4 bg-[#FAF7F2] text-[#15291E] hover:bg-[#EAE2D5] font-semibold text-sm rounded-full shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 group"
+          <a
+            href="#accommodations"
+            className="w-full sm:w-auto px-8 py-4 bg-[#FAF7F2] text-[#15291E] hover:bg-[#EAE2D5] font-semibold text-sm rounded-full shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 group cursor-pointer"
           >
-            <span>Explore Our Cottages</span>
+            <span>Explore Accommodations</span>
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-          </Link>
+          </a>
 
           <WhatsAppButton
             label="Enquire on WhatsApp"

@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Compass, MapPin, Phone, Mail, ArrowUpRight, Heart } from 'lucide-react';
 import { SITE_CONFIG } from '../config/site';
-import { COTTAGES } from '../data/cottages';
 import WhatsAppButton from './WhatsAppButton';
 
 export const Footer: React.FC = () => {
@@ -56,13 +55,7 @@ export const Footer: React.FC = () => {
                 <Link to="/" className="hover:text-white transition-colors">Home</Link>
               </li>
               <li>
-                <Link to="/cottages" className="hover:text-white transition-colors">Cottages & Rooms</Link>
-              </li>
-              <li>
                 <Link to="/experiences" className="hover:text-white transition-colors">Nature Experiences</Link>
-              </li>
-              <li>
-                <Link to="/gallery" className="hover:text-white transition-colors">Photo Gallery</Link>
               </li>
               <li>
                 <Link to="/about" className="hover:text-white transition-colors">About {SITE_CONFIG.name}</Link>
@@ -73,30 +66,37 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Column 3: Cottages List */}
+          {/* Column 3: Bedroom Types */}
           <div className="space-y-4">
             <h4 className="font-serif text-lg font-semibold text-[#C89D66] tracking-wide">
-              Our 9 Accommodations
+              Accommodations
             </h4>
-            <ul className="space-y-2 text-xs font-sans text-white/75 font-light">
-              {COTTAGES.slice(0, 7).map((room) => (
-                <li key={room.id}>
-                  <Link
-                    to={`/cottages/${room.id}`}
-                    className="hover:text-[#C89D66] transition-colors flex items-center justify-between"
-                  >
-                    <span className="truncate">{room.name}</span>
-                    <ArrowUpRight className="w-3 h-3 opacity-50 flex-shrink-0 ml-1" />
-                  </Link>
-                </li>
-              ))}
+            <ul className="space-y-2.5 text-xs font-sans text-white/75 font-light">
               <li>
-                <Link
-                  to="/cottages"
-                  className="text-[#C89D66] hover:underline font-medium block pt-1"
+                <a
+                  href="#accommodations"
+                  className="hover:text-[#C89D66] transition-colors flex items-center justify-between"
                 >
-                  View All 9 Cottages →
-                </Link>
+                  <span>Single Bedroom</span>
+                  <ArrowUpRight className="w-3 h-3 opacity-50 flex-shrink-0 ml-1" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#accommodations"
+                  className="hover:text-[#C89D66] transition-colors flex items-center justify-between"
+                >
+                  <span>Double Bedroom</span>
+                  <ArrowUpRight className="w-3 h-3 opacity-50 flex-shrink-0 ml-1" />
+                </a>
+              </li>
+              <li className="pt-2">
+                <a
+                  href="#accommodations"
+                  className="text-[#C89D66] hover:underline font-medium block"
+                >
+                  Choose Your Bedroom →
+                </a>
               </li>
             </ul>
           </div>

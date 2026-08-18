@@ -1,13 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Users, BedDouble, Maximize2, Sparkles, ArrowRight, ShieldCheck } from 'lucide-react';
+import { Users, BedDouble, Maximize2, Sparkles, ShieldCheck } from 'lucide-react';
 import type { Cottage } from '../data/cottages';
 import WhatsAppButton from './WhatsAppButton';
 
 interface CottageCardProps {
   cottage: Cottage;
   index?: number;
-  featuredOnly?: boolean;
 }
 
 export const CottageCard: React.FC<CottageCardProps> = ({ cottage, index = 0 }) => {
@@ -65,14 +63,9 @@ export const CottageCard: React.FC<CottageCardProps> = ({ cottage, index = 0 }) 
       <div className="p-6 sm:p-7 flex flex-col flex-grow justify-between bg-[#FAF7F2]/50">
         <div>
           {/* Room Name Heading */}
-          <Link
-            to={`/cottages/${cottage.id}`}
-            className="block group-hover:text-[#15291E] transition-colors"
-          >
-            <h3 className="font-serif text-2xl sm:text-3xl font-semibold text-[#1C201D] leading-tight">
-              {cottage.name}
-            </h3>
-          </Link>
+          <h3 className="font-serif text-2xl sm:text-3xl font-semibold text-[#1C201D] leading-tight">
+            {cottage.name}
+          </h3>
 
           {/* Tagline */}
           <p className="mt-2 text-sm text-[#3D4540] font-sans line-clamp-2 leading-relaxed font-light">
@@ -91,7 +84,7 @@ export const CottageCard: React.FC<CottageCardProps> = ({ cottage, index = 0 }) 
             </div>
           </div>
 
-          {/* Top 3 Amenities */}
+          {/* Top Amenities Badges */}
           <div className="mt-4 flex flex-wrap gap-1.5">
             {cottage.amenities.slice(0, 3).map((amenity, i) => (
               <span
@@ -110,25 +103,15 @@ export const CottageCard: React.FC<CottageCardProps> = ({ cottage, index = 0 }) 
           </div>
         </div>
 
-        {/* Action Button Footer */}
-        <div className="mt-6 pt-5 border-t border-[#EAE2D5] flex flex-col sm:flex-row items-center gap-3">
-          <Link
-            to={`/cottages/${cottage.id}`}
-            className="w-full sm:w-1/2 py-2.5 px-4 text-center text-xs font-medium text-[#15291E] bg-white hover:bg-[#15291E] hover:text-[#FAF7F2] border border-[#15291E] rounded-full transition-all duration-300 flex items-center justify-center gap-1.5 group/btn"
-          >
-            <span>View Details</span>
-            <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover/btn:translate-x-1" />
-          </Link>
-
-          <div className="w-full sm:w-1/2">
-            <WhatsAppButton
-              roomName={cottage.name}
-              label={`WhatsApp ${cottage.shortName}`}
-              size="sm"
-              variant="secondary"
-              fullWidth
-            />
-          </div>
+        {/* Dynamic WhatsApp Booking Button */}
+        <div className="mt-6 pt-5 border-t border-[#EAE2D5]">
+          <WhatsAppButton
+            roomName={cottage.name}
+            label={`Enquire About ${cottage.shortName}`}
+            size="md"
+            variant="primary"
+            fullWidth
+          />
         </div>
       </div>
     </div>

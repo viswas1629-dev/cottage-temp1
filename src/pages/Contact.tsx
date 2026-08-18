@@ -172,22 +172,15 @@ export const Contact: React.FC = () => {
                   </div>
 
                   <div className="space-y-1">
-                    <label className="text-xs font-medium text-[#1C201D]">Cottage Preference</label>
+                    <label className="text-xs font-medium text-[#1C201D]">Bedroom Preference</label>
                     <select
                       value={formData.roomInterest}
                       onChange={(e) => setFormData({ ...formData, roomInterest: e.target.value })}
                       className="w-full px-4 py-3 bg-[#FAF7F2] border border-[#EAE2D5] rounded-xl text-xs text-[#1C201D] focus:outline-none focus:border-[#15291E]"
                     >
-                      <option value="Any Cottage">Any Cottage (Recommend me)</option>
-                      <option value="Room 01 — Pine Valley Suite">Room 01 — Pine Valley Suite</option>
-                      <option value="Room 02 — Mist View Cottage">Room 02 — Mist View Cottage</option>
-                      <option value="Room 03 — Cedar Ridge Cabin">Room 03 — Cedar Ridge Cabin</option>
-                      <option value="Room 04 — Forest Canopy Villa">Room 04 — Forest Canopy Villa</option>
-                      <option value="Room 05 — Heritage Stone Suite">Room 05 — Heritage Stone Suite</option>
-                      <option value="Room 06 — Meadow Edge Cottage">Room 06 — Meadow Edge Cottage</option>
-                      <option value="Room 07 — Cloud Peak Chalet">Room 07 — Cloud Peak Chalet</option>
-                      <option value="Room 08 — Stream Side Sanctuary">Room 08 — Stream Side Sanctuary</option>
-                      <option value="Room 09 — Whispering Pines Suite">Room 09 — Whispering Pines Suite</option>
+                      <option value="Any Bedroom">Any Bedroom (Recommend me)</option>
+                      <option value="Single Bedroom">Single Bedroom</option>
+                      <option value="Double Bedroom">Double Bedroom</option>
                     </select>
                   </div>
                 </div>
