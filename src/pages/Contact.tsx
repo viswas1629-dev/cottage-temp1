@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Send, MessageCircle, CheckCircle2 } from 'lucide-react';
+import { Phone, Mail, MapPin, Send, MessageCircle, CheckCircle2, Sun, CloudRain } from 'lucide-react';
 import { SITE_CONFIG } from '../config/site';
 import WhatsAppButton from '../components/WhatsAppButton';
 import LocationMap from '../components/LocationMap';
@@ -29,13 +29,13 @@ export const Contact: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#15291E]/5 text-[#15291E] text-xs font-mono font-medium border border-[#15291E]/10">
             <MessageCircle className="w-3.5 h-3.5 text-[#C89D66]" />
-            <span>Direct Reservations & Enquiries</span>
+            <span>Location, Directions & Reservations</span>
           </div>
           <h1 className="font-serif text-4xl sm:text-6xl font-normal text-[#1C201D]">
-            Get in Touch With Us
+            Contact & Directions
           </h1>
           <p className="text-base text-[#3D4540] font-sans font-light leading-relaxed">
-            Have questions about room features, custom stay dates, or transportation? Contact our team directly on WhatsApp or send us an enquiry.
+            Perched at 7,200 feet in Kodaikanal. Have questions about room availability, directions, transport pick-up, or stay dates? Contact our team directly.
           </p>
         </div>
 
@@ -50,7 +50,7 @@ export const Contact: React.FC = () => {
                 Quickest Contact
               </h2>
               <p className="text-xs font-sans text-white/80 font-light leading-relaxed">
-                For immediate responses regarding cottage availability, WhatsApp is our primary channel.
+                For immediate responses regarding cottage availability and booking details, WhatsApp is our primary channel.
               </p>
               
               <div className="pt-2">
@@ -65,7 +65,7 @@ export const Contact: React.FC = () => {
 
             <div className="bg-white p-8 rounded-3xl border border-[#EAE2D5] space-y-6 shadow-xs">
               <h3 className="font-serif text-2xl font-semibold text-[#1C201D]">
-                Contact Information
+                Contact & Address
               </h3>
 
               <div className="space-y-4 text-xs sm:text-sm text-[#3D4540]">
@@ -74,6 +74,7 @@ export const Contact: React.FC = () => {
                   <div>
                     <h4 className="font-semibold text-[#1C201D]">Property Address</h4>
                     <p className="text-[#6E7771] font-light mt-0.5">{SITE_CONFIG.location.address}</p>
+                    <p className="text-[11px] text-[#C89D66] font-medium mt-1">{SITE_CONFIG.location.landmark}</p>
                   </div>
                 </div>
 
@@ -150,7 +151,7 @@ export const Contact: React.FC = () => {
                     <input
                       type="tel"
                       required
-                      placeholder="+91 6381793062"
+                      placeholder="+91 98765 43210"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       className="w-full px-4 py-3 bg-[#FAF7F2] border border-[#EAE2D5] rounded-xl text-xs text-[#1C201D] focus:outline-none focus:border-[#15291E]"
@@ -216,9 +217,40 @@ export const Contact: React.FC = () => {
 
         </div>
 
-        {/* Location Map */}
+        {/* Location Map Section */}
         <div className="pt-8">
           <LocationMap />
+        </div>
+
+        {/* Climate & Transport Pick-up Section */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
+          <div className="bg-white p-8 rounded-3xl border border-[#EAE2D5] space-y-4 shadow-xs">
+            <div className="flex items-center gap-3">
+              <Sun className="w-6 h-6 text-[#C89D66]" />
+              <h3 className="font-serif text-2xl font-semibold text-[#1C201D]">Best Time to Visit</h3>
+            </div>
+            <p className="text-xs sm:text-sm text-[#3D4540] font-sans font-light leading-relaxed">
+              Kodaikanal enjoys pleasant, crisp weather throughout the year. Spring & Summer (September to May) bring clear skies and cool breezes (15°C to 20°C). Monsoon season (June to August) paints the mountains in vibrant emerald hues with misty rain and cascading waterfalls.
+            </p>
+          </div>
+
+          <div className="bg-white p-8 rounded-3xl border border-[#EAE2D5] space-y-4 shadow-xs">
+            <div className="flex items-center gap-3">
+              <CloudRain className="w-6 h-6 text-[#15291E]" />
+              <h3 className="font-serif text-2xl font-semibold text-[#1C201D]">Pick-up & Transfer Assistance</h3>
+            </div>
+            <p className="text-xs sm:text-sm text-[#3D4540] font-sans font-light leading-relaxed">
+              We can arrange private chauffeured car pick-up services from Madurai Airport, Coimbatore Airport, or Kodai Road Railway Station directly to our cottage gates upon request.
+            </p>
+            <div className="pt-2">
+              <WhatsAppButton
+                customMessage="Hello, I would like to enquire about transport pick-up assistance for my trip to Kodai Haven."
+                label="Enquire for Taxi Transfer"
+                size="sm"
+                variant="outline"
+              />
+            </div>
+          </div>
         </div>
 
       </div>

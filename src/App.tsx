@@ -9,7 +9,6 @@ import Cottages from './pages/Cottages';
 import CottageDetail from './pages/CottageDetail';
 import Gallery from './pages/Gallery';
 import Experiences from './pages/Experiences';
-import Location from './pages/Location';
 import About from './pages/About';
 import Contact from './pages/Contact';
 
@@ -30,7 +29,6 @@ export const App: React.FC = () => {
             <Route path="/cottages/:id" element={<CottageDetail />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/experiences" element={<Experiences />} />
-            <Route path="/location" element={<Location />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             

@@ -13,14 +13,14 @@ export interface Experience {
 export const EXPERIENCES: Experience[] = [
   {
     id: "exp-01",
-    title: "Starlit Campfire & Acoustic Evenings",
-    subtitle: "Warm fire, roasted marshmallows, and crisp mountain night air.",
-    description: "Every evening at dusk, gather around our private sunken stone fire pit. Enjoy complimentary warm spiced chai, mulled cider, and roasted marshmallows as the stars illuminate the clear mountain sky.",
-    image: "https://images.unsplash.com/photo-1526491109672-74f44073b7f3?auto=format&fit=crop&q=80&w=1600",
+    title: "Cozy Campfire Evenings",
+    subtitle: "Enjoy a warm campfire evening with family and friends in the cool Kodaikanal weather.",
+    description: "Spend a relaxing evening around the campfire with your loved ones. Enjoy the cool Kodaikanal weather, have some warm snacks, share stories, and make beautiful memories together.",
+    image: "https://images.squarespace-cdn.com/content/v1/64b52d0d262dd80bf3ba13d5/1706086637222-1RJ85CJPM8HLN7O8SZ9H/image-asset.jpeg",
     category: "Evening Ritual",
     duration: "7:00 PM – 10:00 PM",
     timing: "Daily",
-    highlights: ["Sunken stone fire pit", "Marshmallow roasting kit", "Hot spiced beverages", "Stargazing ambience"]
+    highlights: ["🔥 Outdoor Campfire", "🌿 Natural Surroundings", "👨‍👩‍👧‍👦 Family & Friends", "🌙 Peaceful Evening"]
   },
   {
     id: "exp-02",
@@ -46,14 +46,14 @@ export const EXPERIENCES: Experience[] = [
   },
   {
     id: "exp-04",
-    title: "Artisanal Fireside Dining",
+    title: "Homely Dining Experience",
     subtitle: "Farm-fresh South Indian & Continental meals cooked with local mountain herbs.",
-    description: "Savor rich, authentic dishes prepared using vegetables harvested from nearby high-altitude farms. Enjoy candlelit meals in your private cottage veranda or central dining gazebos.",
+    description: "Enjoy freshly prepared meals during your stay at the cottage. Food arrangements are available on advance request at the time of booking. Since the meals are prepared based on prior orders, last-minute food requests may not be possible.",
     image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=1600",
     category: "Culinary",
     duration: "On Request",
     timing: "Breakfast, Lunch & Dinner",
-    highlights: ["Organic farm vegetables", "Authentic Kodai spices", "Private veranda room service", "Candlelit gazebo setup"]
+    highlights: ["🍛 Freshly Prepared Meals", "📅 Advance Order Required", "🏡 Homely Dining", "⚠️ No Last-Minute Orders"]
   },
   {
     id: "exp-05",
