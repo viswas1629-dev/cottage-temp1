@@ -9,6 +9,7 @@ import { BEDROOM_CATEGORIES } from '../data/bedrooms';
 import { EXPERIENCES } from '../data/experiences';
 import { GALLERY_ITEMS } from '../data/gallery';
 import { REVIEWS } from '../data/reviews';
+import cotaFronts1 from '../assets/images/cota-fronts1.webp';
 
 export const Home: React.FC = () => {
   const galleryPreview = GALLERY_ITEMS.slice(0, 6);
@@ -63,7 +64,7 @@ export const Home: React.FC = () => {
           <div className="lg:col-span-6 relative">
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border border-[#EAE2D5] img-zoom-container">
               <img
-                src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&q=80&w=1200"
+                src={cotaFronts1}
                 alt="Luxury Cottage interior bedroom"
                 className="w-full h-full object-cover"
               />
