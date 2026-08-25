@@ -4,10 +4,10 @@ export const SITE_CONFIG = {
   subtagline: "Nestled high in the misty hills of Kodaikanal, experience private luxury cottages surrounded by pine forests and mountain tranquility.",
   
   // WhatsApp Configuration (SINGLE SOURCE OF TRUTH for client number)
-  whatsappNumber: "+916381793062", // Phone number formatted with country code without spaces or symbols for wa.me link
-  whatsappDisplay: "+91 6381793062",
+  whatsappNumber: "+918072999242", // Phone number formatted with country code without spaces or symbols for wa.me link
+  whatsappDisplay: "+91 8072 999 242",
   
-  phone: "+91 6381793062",
+  phone: "+91 8072 999 242",
   email: "stay@antoscomfortresidence.com",
   
   location: {
