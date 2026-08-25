@@ -5,7 +5,6 @@ import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 
 import Home from './pages/Home';
-import Experiences from './pages/Experiences';
 import About from './pages/About';
 import Contact from './pages/Contact';
 
@@ -22,7 +21,6 @@ export const App: React.FC = () => {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/experiences" element={<Experiences />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             

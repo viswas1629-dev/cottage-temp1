@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Sparkles, ShieldCheck, BedDouble, Car, MessageCircle, Compass, ArrowRight } from 'lucide-react';
+import { Sparkles, ShieldCheck, BedDouble, Car, MessageCircle, Compass, ArrowRight, Clock, ChevronDown, ChevronUp, CheckCircle2 } from 'lucide-react';
 import HeroSlider from '../components/HeroSlider';
 import BedroomCard from '../components/BedroomCard';
 import LocationMap from '../components/LocationMap';
@@ -13,6 +13,11 @@ import cotaFronts1 from '../assets/images/cota-fronts1.webp';
 
 export const Home: React.FC = () => {
   const galleryPreview = GALLERY_ITEMS.slice(0, 6);
+  const [expandedExpId, setExpandedExpId] = useState<string | null>(null);
+
+  const toggleExpDetails = (id: string) => {
+    setExpandedExpId((prev) => (prev === id ? null : id));
+  };
 
   return (
     <div className="w-full bg-[#FAF7F2]">
@@ -128,52 +133,52 @@ export const Home: React.FC = () => {
 
         <div className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto">
           
-          <div className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] p-8 bg-white rounded-2xl border border-[#EAE2D5] shadow-xs space-y-4 hover:shadow-md transition-all">
-            <div className="p-3 bg-[#15291E]/5 text-[#15291E] rounded-xl w-fit">
+          <div className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] p-8 bg-[#173F2B] rounded-2xl border border-[#23533A] shadow-md hover:shadow-2xl space-y-4 transform hover:-translate-y-1.5 transition-all duration-300 ease-out group">
+            <div className="p-3 bg-white/10 text-[#C89D66] rounded-xl w-fit border border-white/10 group-hover:bg-[#C89D66]/20 transition-colors duration-300">
               <ShieldCheck className="w-6 h-6 text-[#C89D66]" />
             </div>
-            <h3 className="font-serif text-2xl font-semibold text-[#1C201D]">Safe & Secure Stay</h3>
-            <p className="text-xs text-[#6E7771] font-sans leading-relaxed font-light">
+            <h3 className="font-serif text-2xl font-semibold text-white tracking-wide">100% Safe & Secure Stay</h3>
+            <p className="text-xs text-[#E8F0EA] font-sans leading-relaxed font-light opacity-90">
               A comfortable and secure environment for families, couples and groups.
             </p>
           </div>
 
-          <div className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] p-8 bg-white rounded-2xl border border-[#EAE2D5] shadow-xs space-y-4 hover:shadow-md transition-all">
-            <div className="p-3 bg-[#15291E]/5 text-[#15291E] rounded-xl w-fit">
+          <div className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] p-8 bg-[#173F2B] rounded-2xl border border-[#23533A] shadow-md hover:shadow-2xl space-y-4 transform hover:-translate-y-1.5 transition-all duration-300 ease-out group">
+            <div className="p-3 bg-white/10 text-[#C89D66] rounded-xl w-fit border border-white/10 group-hover:bg-[#C89D66]/20 transition-colors duration-300">
               <Sparkles className="w-6 h-6 text-[#C89D66]" />
             </div>
-            <h3 className="font-serif text-2xl font-semibold text-[#1C201D]">Clean & Well-Maintained</h3>
-            <p className="text-xs text-[#6E7771] font-sans leading-relaxed font-light">
+            <h3 className="font-serif text-2xl font-semibold text-white tracking-wide">Clean & Well-Maintained</h3>
+            <p className="text-xs text-[#E8F0EA] font-sans leading-relaxed font-light opacity-90">
               Clean bedrooms, bathrooms and common areas maintained for a comfortable stay.
             </p>
           </div>
 
-          <div className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] p-8 bg-white rounded-2xl border border-[#EAE2D5] shadow-xs space-y-4 hover:shadow-md transition-all">
-            <div className="p-3 bg-[#15291E]/5 text-[#15291E] rounded-xl w-fit">
+          <div className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] p-8 bg-[#173F2B] rounded-2xl border border-[#23533A] shadow-md hover:shadow-2xl space-y-4 transform hover:-translate-y-1.5 transition-all duration-300 ease-out group">
+            <div className="p-3 bg-white/10 text-[#C89D66] rounded-xl w-fit border border-white/10 group-hover:bg-[#C89D66]/20 transition-colors duration-300">
               <BedDouble className="w-6 h-6 text-[#C89D66]" />
             </div>
-            <h3 className="font-serif text-2xl font-semibold text-[#1C201D]">Comfortable Bedrooms</h3>
-            <p className="text-xs text-[#6E7771] font-sans leading-relaxed font-light">
+            <h3 className="font-serif text-2xl font-semibold text-white tracking-wide">Comfortable Bedrooms</h3>
+            <p className="text-xs text-[#E8F0EA] font-sans leading-relaxed font-light opacity-90">
               Neat and comfortable bedrooms with the basic facilities needed for a relaxing stay.
             </p>
           </div>
 
-          <div className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] p-8 bg-white rounded-2xl border border-[#EAE2D5] shadow-xs space-y-4 hover:shadow-md transition-all">
-            <div className="p-3 bg-[#15291E]/5 text-[#15291E] rounded-xl w-fit">
+          <div className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] p-8 bg-[#173F2B] rounded-2xl border border-[#23533A] shadow-md hover:shadow-2xl space-y-4 transform hover:-translate-y-1.5 transition-all duration-300 ease-out group">
+            <div className="p-3 bg-white/10 text-[#C89D66] rounded-xl w-fit border border-white/10 group-hover:bg-[#C89D66]/20 transition-colors duration-300">
               <Car className="w-6 h-6 text-[#C89D66]" />
             </div>
-            <h3 className="font-serif text-2xl font-semibold text-[#1C201D]">Parking Available</h3>
-            <p className="text-xs text-[#6E7771] font-sans leading-relaxed font-light">
+            <h3 className="font-serif text-2xl font-semibold text-white tracking-wide">Parking Available</h3>
+            <p className="text-xs text-[#E8F0EA] font-sans leading-relaxed font-light opacity-90">
               Convenient parking space available for guests travelling by car.
             </p>
           </div>
 
-          <div className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] p-8 bg-white rounded-2xl border border-[#EAE2D5] shadow-xs space-y-4 hover:shadow-md transition-all">
-            <div className="p-3 bg-[#15291E]/5 text-[#15291E] rounded-xl w-fit">
+          <div className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] p-8 bg-[#173F2B] rounded-2xl border border-[#23533A] shadow-md hover:shadow-2xl space-y-4 transform hover:-translate-y-1.5 transition-all duration-300 ease-out group">
+            <div className="p-3 bg-white/10 text-[#C89D66] rounded-xl w-fit border border-white/10 group-hover:bg-[#C89D66]/20 transition-colors duration-300">
               <MessageCircle className="w-6 h-6 text-[#C89D66]" />
             </div>
-            <h3 className="font-serif text-2xl font-semibold text-[#1C201D]">Easy WhatsApp Enquiry</h3>
-            <p className="text-xs text-[#6E7771] font-sans leading-relaxed font-light">
+            <h3 className="font-serif text-2xl font-semibold text-white tracking-wide">Easy WhatsApp Enquiry</h3>
+            <p className="text-xs text-[#E8F0EA] font-sans leading-relaxed font-light opacity-90">
               Contact us easily on WhatsApp for room availability, booking and stay-related enquiries.
             </p>
           </div>
@@ -181,52 +186,104 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* 6. Experiences Preview */}
-      <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      {/* 6. Curated Stay Experiences */}
+      <section id="experiences" className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div className="space-y-3 max-w-2xl">
             <span className="text-xs font-mono uppercase tracking-widest text-[#C89D66] font-medium">
-              Curated Activities
+              CURATED ACTIVITIES
             </span>
             <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#1C201D]">
-              Nature & Fireside Experiences
+              Experiences at Anto's Comfort Residence
             </h2>
+            <p className="text-sm text-[#3D4540] font-sans font-light">
+              Enjoy peaceful fireside evenings, scenic mountain drives, and authentic local meals during your stay.
+            </p>
           </div>
-          <Link
-            to="/experiences"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-[#15291E] hover:text-[#C89D66]"
-          >
-            <span>Explore All Experiences</span>
-            <ArrowRight className="w-4 h-4" />
-          </Link>
+
+          <div className="px-4 py-2 bg-[#15291E] text-[#FAF7F2] rounded-full text-xs font-mono font-medium shadow-xs self-start md:self-auto flex items-center gap-2">
+            <Sparkles className="w-3.5 h-3.5 text-[#C89D66]" />
+            <span>Stay Activities</span>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {EXPERIENCES.slice(0, 3).map((exp) => (
-            <div
-              key={exp.id}
-              className="group bg-white rounded-2xl overflow-hidden border border-[#EAE2D5] shadow-xs hover:shadow-lg transition-all duration-300"
-            >
-              <div className="aspect-[16/10] overflow-hidden">
-                <img
-                  src={exp.image}
-                  alt={exp.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
+        {/* 4 Experience Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {EXPERIENCES.slice(0, 4).map((exp) => {
+            const isExpanded = expandedExpId === exp.id;
+            return (
+              <div
+                key={exp.id}
+                className="group bg-white rounded-2xl overflow-hidden border border-[#EAE2D5] shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
+              >
+                <div>
+                  {/* Image */}
+                  <div className="aspect-[16/10] overflow-hidden relative">
+                    <img
+                      src={exp.image}
+                      alt={exp.title}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute top-3 left-3 bg-[#15291E]/90 backdrop-blur-md text-[#FAF7F2] px-3 py-1 rounded-full text-[11px] font-mono">
+                      {exp.category}
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-6 space-y-3">
+                    <h3 className="font-serif text-2xl font-semibold text-[#1C201D]">
+                      {exp.title}
+                    </h3>
+                    <p className="text-xs text-[#C89D66] font-medium italic">
+                      "{exp.subtitle}"
+                    </p>
+                    <p className={`text-xs text-[#6E7771] font-sans font-light leading-relaxed ${isExpanded ? '' : 'line-clamp-2'}`}>
+                      {exp.description}
+                    </p>
+
+                    {/* Expanded details: highlights & timing */}
+                    {isExpanded && (
+                      <div className="pt-3 border-t border-[#EAE2D5] space-y-3 animate-fade-in">
+                        {exp.duration && (
+                          <div className="flex items-center gap-2 text-xs text-[#15291E] font-medium">
+                            <Clock className="w-3.5 h-3.5 text-[#C89D66]" />
+                            <span>{exp.duration}</span>
+                          </div>
+                        )}
+                        <div className="space-y-1.5 pt-1">
+                          {exp.highlights.map((highlight, idx) => (
+                            <div key={idx} className="flex items-center gap-2 text-xs text-[#3D4540]">
+                              <CheckCircle2 className="w-3.5 h-3.5 text-[#C89D66] flex-shrink-0" />
+                              <span>{highlight}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+
+                {/* Card Actions: Toggle More Details + WhatsApp Enquiry */}
+                <div className="p-6 pt-0 space-y-3">
+                  <button
+                    onClick={() => toggleExpDetails(exp.id)}
+                    className="w-full text-xs font-mono font-medium text-[#15291E] hover:text-[#C89D66] transition-colors flex items-center justify-center gap-1.5 py-1.5 border-t border-[#EAE2D5]"
+                  >
+                    <span>{isExpanded ? 'Hide Details' : 'More Details'}</span>
+                    {isExpanded ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
+                  </button>
+
+                  <WhatsAppButton
+                    customMessage={`Hello, I would like to enquire about experiencing ${exp.title} during my stay at Anto's Comfort Residence.`}
+                    label={`Enquire About ${exp.title}`}
+                    size="sm"
+                    variant="primary"
+                    fullWidth
+                  />
+                </div>
               </div>
-              <div className="p-6 space-y-3">
-                <span className="text-[11px] font-mono text-[#C89D66] uppercase tracking-wider">
-                  {exp.category}
-                </span>
-                <h3 className="font-serif text-2xl font-semibold text-[#1C201D]">
-                  {exp.title}
-                </h3>
-                <p className="text-xs text-[#6E7771] font-sans font-light line-clamp-2">
-                  {exp.description}
-                </p>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 
