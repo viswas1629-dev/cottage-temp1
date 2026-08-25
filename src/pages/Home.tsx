@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Sparkles, Flame, Trees, Compass, ArrowRight, Coffee, Moon } from 'lucide-react';
+import { Sparkles, ShieldCheck, BedDouble, Car, MessageCircle, Compass, ArrowRight } from 'lucide-react';
 import HeroSlider from '../components/HeroSlider';
 import BedroomCard from '../components/BedroomCard';
 import LocationMap from '../components/LocationMap';
@@ -112,95 +112,72 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* 4. Why Stay With Us (USPs) */}
+      {/* 4. The Anto's Comfort Residence Experience */}
       <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <span className="text-xs font-mono uppercase tracking-widest text-[#C89D66] font-medium">
-            The Anto's Comfort Residence Experience
+            THE ANTO'S COMFORT RESIDENCE EXPERIENCE
           </span>
           <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#1C201D]">
-            Thoughtfully Curated For Peace & Rest
+            Comfortable Stay, Peaceful Moments.
           </h2>
-          <p className="text-sm text-[#3D4540] font-sans font-light">
-            Every feature at our cottage stay is designed to help you disconnect from stress and reconnect with nature.
+          <p className="text-sm sm:text-base text-[#3D4540] font-sans font-light leading-relaxed">
+            At Anto's Comfort Residence, we focus on giving you a clean, comfortable and peaceful stay in Kodaikanal. From well-maintained rooms and clean bathrooms to a safe environment and convenient facilities, we make your stay simple and comfortable.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto">
           
-          <div className="p-8 bg-white rounded-2xl border border-[#EAE2D5] shadow-xs space-y-4 hover:shadow-md transition-all">
+          <div className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] p-8 bg-white rounded-2xl border border-[#EAE2D5] shadow-xs space-y-4 hover:shadow-md transition-all">
             <div className="p-3 bg-[#15291E]/5 text-[#15291E] rounded-xl w-fit">
-              <Flame className="w-6 h-6 text-[#C89D66]" />
+              <ShieldCheck className="w-6 h-6 text-[#C89D66]" />
             </div>
-            <h3 className="font-serif text-2xl font-semibold text-[#1C201D]">Wood Fireplaces</h3>
+            <h3 className="font-serif text-2xl font-semibold text-[#1C201D]">Safe & Secure Stay</h3>
             <p className="text-xs text-[#6E7771] font-sans leading-relaxed font-light">
-              Every room features authentic wood fireplaces or cast-iron wood stoves for cozy mountain evenings.
+              A comfortable and secure environment for families, couples and groups.
             </p>
           </div>
 
-          <div className="p-8 bg-white rounded-2xl border border-[#EAE2D5] shadow-xs space-y-4 hover:shadow-md transition-all">
+          <div className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] p-8 bg-white rounded-2xl border border-[#EAE2D5] shadow-xs space-y-4 hover:shadow-md transition-all">
             <div className="p-3 bg-[#15291E]/5 text-[#15291E] rounded-xl w-fit">
-              <Trees className="w-6 h-6 text-[#C89D66]" />
+              <Sparkles className="w-6 h-6 text-[#C89D66]" />
             </div>
-            <h3 className="font-serif text-2xl font-semibold text-[#1C201D]">Panoramic Views</h3>
+            <h3 className="font-serif text-2xl font-semibold text-[#1C201D]">Clean & Well-Maintained</h3>
             <p className="text-xs text-[#6E7771] font-sans leading-relaxed font-light">
-              Floor-to-ceiling glass windows and private balconies overlooking misty pine canyons and flower valleys.
+              Clean bedrooms, bathrooms and common areas maintained for a comfortable stay.
             </p>
           </div>
 
-          <div className="p-8 bg-white rounded-2xl border border-[#EAE2D5] shadow-xs space-y-4 hover:shadow-md transition-all">
+          <div className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] p-8 bg-white rounded-2xl border border-[#EAE2D5] shadow-xs space-y-4 hover:shadow-md transition-all">
             <div className="p-3 bg-[#15291E]/5 text-[#15291E] rounded-xl w-fit">
-              <Moon className="w-6 h-6 text-[#C89D66]" />
+              <BedDouble className="w-6 h-6 text-[#C89D66]" />
             </div>
-            <h3 className="font-serif text-2xl font-semibold text-[#1C201D]">Stargazing Skies</h3>
+            <h3 className="font-serif text-2xl font-semibold text-[#1C201D]">Comfortable Bedrooms</h3>
             <p className="text-xs text-[#6E7771] font-sans leading-relaxed font-light">
-              Zero light pollution location ideal for telescope observation, shooting stars, and clear night skies.
+              Neat and comfortable bedrooms with the basic facilities needed for a relaxing stay.
             </p>
           </div>
 
-          <div className="p-8 bg-white rounded-2xl border border-[#EAE2D5] shadow-xs space-y-4 hover:shadow-md transition-all">
+          <div className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] p-8 bg-white rounded-2xl border border-[#EAE2D5] shadow-xs space-y-4 hover:shadow-md transition-all">
             <div className="p-3 bg-[#15291E]/5 text-[#15291E] rounded-xl w-fit">
-              <Coffee className="w-6 h-6 text-[#C89D66]" />
+              <Car className="w-6 h-6 text-[#C89D66]" />
             </div>
-            <h3 className="font-serif text-2xl font-semibold text-[#1C201D]">Fireside Dining</h3>
+            <h3 className="font-serif text-2xl font-semibold text-[#1C201D]">Parking Available</h3>
             <p className="text-xs text-[#6E7771] font-sans leading-relaxed font-light">
-              Farm-to-table South Indian & Continental food prepared fresh with local herbs and served in your private room.
+              Convenient parking space available for guests travelling by car.
             </p>
           </div>
 
-        </div>
-      </section>
-
-      {/* 5. Scroll-Driven Nature Parallax Banner (Requirement 10) */}
-      <section className="relative py-28 sm:py-36 bg-[#0F1D15] text-[#FAF7F2] overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-40">
-          <img
-            src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&q=80&w=2000"
-            alt="Misty forest depth"
-            className="w-full h-full object-cover transform scale-105"
-          />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0F1D15] via-[#0F1D15]/80 to-transparent z-10" />
-
-        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl space-y-6">
-            <span className="text-xs font-mono uppercase tracking-widest text-[#C89D66]">
-              Immersion in Nature
-            </span>
-            <h2 className="font-serif text-4xl sm:text-6xl font-normal leading-tight text-white">
-              Listen to the Pine Breeze & Mountain Streams.
-            </h2>
-            <p className="text-base text-white/80 font-sans font-light leading-relaxed">
-              Step outside your veranda into clean, crisp 7,000 ft mountain air. Breathe in fresh eucalyptus notes, hear wild birds singing in morning canopy, and experience deep restful sleep.
-            </p>
-            <div className="pt-4">
-              <WhatsAppButton
-                label="Enquire About Availability"
-                size="lg"
-                variant="secondary"
-              />
+          <div className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] p-8 bg-white rounded-2xl border border-[#EAE2D5] shadow-xs space-y-4 hover:shadow-md transition-all">
+            <div className="p-3 bg-[#15291E]/5 text-[#15291E] rounded-xl w-fit">
+              <MessageCircle className="w-6 h-6 text-[#C89D66]" />
             </div>
+            <h3 className="font-serif text-2xl font-semibold text-[#1C201D]">Easy WhatsApp Enquiry</h3>
+            <p className="text-xs text-[#6E7771] font-sans leading-relaxed font-light">
+              Contact us easily on WhatsApp for room availability, booking and stay-related enquiries.
+            </p>
           </div>
+
         </div>
       </section>
 
