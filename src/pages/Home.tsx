@@ -207,85 +207,104 @@ export const Home: React.FC = () => {
           </div>
         </div>
 
-        {/* 4 Experience Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {EXPERIENCES.slice(0, 4).map((exp) => {
-            const isExpanded = expandedExpId === exp.id;
-            return (
-              <div
-                key={exp.id}
-                className="group bg-white rounded-2xl overflow-hidden border border-[#EAE2D5] shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
-              >
-                <div>
-                  {/* Image */}
-                  <div className="aspect-[16/10] overflow-hidden relative">
-                    <img
-                      src={exp.image}
-                      alt={exp.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                    <div className="absolute top-3 left-3 bg-[#15291E]/90 backdrop-blur-md text-[#FAF7F2] px-3 py-1 rounded-full text-[11px] font-mono">
-                      {exp.category}
+        {/* 5 Experience Cards */}
+<div className="grid grid-cols-1 md:grid-cols-5 gap-3">
+  {EXPERIENCES.slice(0, 5).map((exp) => {
+    const isExpanded = expandedExpId === exp.id;
+    return (
+      <div
+        key={exp.id}
+        className="group bg-[#18352A] rounded-2xl overflow-hidden border border-[#D6A84F]/40 shadow-[0_0_18px_rgba(214,168,79,0.22)] hover:shadow-[0_0_24px_rgba(214,168,79,0.38)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between"
+      >
+        <div>
+          {/* Image */}
+          <div className="aspect-[16/10] overflow-hidden relative">
+            <img
+              src={exp.image}
+              alt={exp.title}
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+
+            <div className="absolute top-3 left-3 bg-[#18352A]/90 backdrop-blur-md text-[#D6A84F] border border-[#D6A84F]/40 px-3 py-1 rounded-full text-[11px] font-mono">
+              {exp.category}
+            </div>
+          </div>
+
+          {/* Content */}
+          <div className="p-6 space-y-3">
+            <h3 className="font-serif text-2xl font-semibold text-white">
+              {exp.title}
+            </h3>
+
+            <p className="text-xs text-[#D6A84F] font-medium italic">
+              "{exp.subtitle}"
+            </p>
+
+            <p
+              className={`text-xs text-[#E6E6E0] font-sans font-light leading-relaxed ${
+                isExpanded ? '' : 'line-clamp-2'
+              }`}
+            >
+              {exp.description}
+            </p>
+
+            {/* Expanded details: highlights & timing */}
+            {isExpanded && (
+              <div className="pt-3 border-t border-[#D6A84F]/30 space-y-3 animate-fade-in">
+                {exp.duration && (
+                  <div className="flex items-center gap-2 text-xs text-[#E6E6E0] font-medium">
+                    <Clock className="w-3.5 h-3.5 text-[#D6A84F]" />
+                    <span>{exp.duration}</span>
+                  </div>
+                )}
+
+                <div className="space-y-1.5 pt-1">
+                  {exp.highlights.map((highlight, idx) => (
+                    <div
+                      key={idx}
+                      className="flex items-center gap-2 text-xs text-[#E6E6E0]"
+                    >
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#D6A84F] flex-shrink-0" />
+                      <span>{highlight}</span>
                     </div>
-                  </div>
-
-                  {/* Content */}
-                  <div className="p-6 space-y-3">
-                    <h3 className="font-serif text-2xl font-semibold text-[#1C201D]">
-                      {exp.title}
-                    </h3>
-                    <p className="text-xs text-[#C89D66] font-medium italic">
-                      "{exp.subtitle}"
-                    </p>
-                    <p className={`text-xs text-[#6E7771] font-sans font-light leading-relaxed ${isExpanded ? '' : 'line-clamp-2'}`}>
-                      {exp.description}
-                    </p>
-
-                    {/* Expanded details: highlights & timing */}
-                    {isExpanded && (
-                      <div className="pt-3 border-t border-[#EAE2D5] space-y-3 animate-fade-in">
-                        {exp.duration && (
-                          <div className="flex items-center gap-2 text-xs text-[#15291E] font-medium">
-                            <Clock className="w-3.5 h-3.5 text-[#C89D66]" />
-                            <span>{exp.duration}</span>
-                          </div>
-                        )}
-                        <div className="space-y-1.5 pt-1">
-                          {exp.highlights.map((highlight, idx) => (
-                            <div key={idx} className="flex items-center gap-2 text-xs text-[#3D4540]">
-                              <CheckCircle2 className="w-3.5 h-3.5 text-[#C89D66] flex-shrink-0" />
-                              <span>{highlight}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                </div>
-
-                {/* Card Actions: Toggle More Details + WhatsApp Enquiry */}
-                <div className="p-6 pt-0 space-y-3">
-                  <button
-                    onClick={() => toggleExpDetails(exp.id)}
-                    className="w-full text-xs font-mono font-medium text-[#15291E] hover:text-[#C89D66] transition-colors flex items-center justify-center gap-1.5 py-1.5 border-t border-[#EAE2D5]"
-                  >
-                    <span>{isExpanded ? 'Hide Details' : 'More Details'}</span>
-                    {isExpanded ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
-                  </button>
-
-                  <WhatsAppButton
-                    customMessage={`Hello, I would like to enquire about experiencing ${exp.title} during my stay at Anto's Comfort Residence.`}
-                    label={`Enquire About ${exp.title}`}
-                    size="sm"
-                    variant="primary"
-                    fullWidth
-                  />
+                  ))}
                 </div>
               </div>
-            );
-          })}
+            )}
+          </div>
         </div>
-      </section>
+
+        {/* Card Actions: Toggle More Details + WhatsApp Enquiry */}
+        <div className="p-6 pt-0 space-y-3">
+          <button
+            onClick={() => toggleExpDetails(exp.id)}
+            className="w-full text-xs font-mono font-medium text-[#D6A84F] hover:text-white transition-colors flex items-center justify-center gap-1.5 py-1.5 border-t border-[#D6A84F]/30"
+          >
+            <span>
+              {isExpanded ? 'Hide Details' : 'More Details'}
+            </span>
+
+            {isExpanded ? (
+              <ChevronUp className="w-3.5 h-3.5 text-[#D6A84F]" />
+            ) : (
+              <ChevronDown className="w-3.5 h-3.5 text-[#D6A84F]" />
+            )}
+          </button>
+
+          <WhatsAppButton
+            customMessage={`Hello, I would like to enquire about experiencing ${exp.title} during my stay at Anto's Comfort Residence.`}
+            label={`Enquire About ${exp.title}`}
+            size="sm"
+            variant="outline"
+            className="!bg-[#18352A] !text-white !border !border-[#D6A84F] hover:!bg-[#D6A84F] hover:!text-[#18352A] transition-colors"
+            fullWidth
+          />
+        </div>
+      </div>
+    );
+  })}
+</div>
+</section>
 
       {/* 7. Gallery Preview Grid */}
       <section className="py-20 bg-[#F4EFE6] border-y border-[#EAE2D5]">

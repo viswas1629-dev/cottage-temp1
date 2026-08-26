@@ -13,7 +13,7 @@ export interface Experience {
 export const EXPERIENCES: Experience[] = [
   {
     id: "exp-01",
-    title: "Cozy Campfire Evenings",
+    title: "Campfire Evenings",
     subtitle: "Enjoy a warm campfire evening with family and friends in the cool Kodaikanal weather.",
     description: "Spend a relaxing evening around the campfire with your loved ones. Enjoy the cool Kodaikanal weather, have some warm snacks, share stories, and make beautiful memories together.",
     image: "https://images.squarespace-cdn.com/content/v1/64b52d0d262dd80bf3ba13d5/1706086637222-1RJ85CJPM8HLN7O8SZ9H/image-asset.jpeg",
@@ -35,36 +35,25 @@ export const EXPERIENCES: Experience[] = [
   },
   {
     id: "exp-03",
-    title: "Sunrise Cloud Ridge Trek",
-    subtitle: "Hike up to Dolphin's Nose and watch morning fog rise over valleys.",
-    description: "A breathtaking moderate morning trek taking you to panoramic viewpoints high above the clouds. Witness the first golden sunbeams piercing through the mist.",
-    image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=1600",
-    category: "Adventure",
-    duration: "2.5 Hours",
-    timing: "6:00 AM Departure",
-    highlights: ["Panoramic cloud valley", "Guided safety trail", "Packed hot breakfast", "Photography assistance"]
+    title: "Pickup & Drop Taxi service",
+    subtitle: "Easy Travel To & From Our Residence.",
+    description: "We can arrange taxi pickup and drop services for our customers. Travel comfortably to and from the residence with ease.",
+    image: "https://t4.ftcdn.net/jpg/04/25/71/31/360_F_425713122_kYvMiGtjoODQq5XoS7P6cZYDUx6hqtRR.jpg",
+    category: "Customer Facility",
+    duration: "Available on Request",
+    timing: "Based on booking schedule",
+    highlights: ["🚕 Pickup & drop available", "📍 Travel to nearby locations", "🕐 Taxi can be arranged on request", "💬 Contact us to arrange your ride"]
   },
   {
     id: "exp-04",
-    title: "Homely Dining Experience",
-    subtitle: "Farm-fresh South Indian & Continental meals cooked with local mountain herbs.",
+    title: "Homely Food Experience",
+    subtitle: "Farm-fresh South Indian & Continental meals.",
     description: "Enjoy freshly prepared meals during your stay at the cottage. Food arrangements are available on advance request at the time of booking. Since the meals are prepared based on pre-orders, last-minute food requests may not be possible.",
-    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=1600",
+    image: "https://t3.ftcdn.net/jpg/08/23/85/92/360_F_823859281_TaiWjmCWf2xevl4hHuu0r5z25Zs82sH5.jpg",
     category: "Food Arrangements",
     duration: "On Request",
     timing: "Breakfast, Lunch & Dinner",
     highlights: ["🍛 Freshly Prepared Meals", "📅 Advance Order Required", "🏡 Homely Dining", "⚠️ No Last-Minute Orders"]
-  },
-  {
-    id: "exp-05",
-    title: "Celestial Stargazing Sessions",
-    subtitle: "High elevation, zero light pollution, crystal clear night sky.",
-    description: "Because of our isolated mountain ridge location away from city lights, Anto's Comfort Residence offers prime conditions for telescope stargazing, observing constellations, and spotting shooting stars.",
-    image: "https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&q=80&w=1600",
-    category: "Mindfulness",
-    duration: "8:30 PM Onwards",
-    timing: "Clear Sky Nights",
-    highlights: ["High-power telescope access", "Constellation map guidance", "Zero light pollution zone", "Cozy wool blankets"]
   },
   {
     id: "exp-06",
