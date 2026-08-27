@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { MapPin, Navigation, Car, Plane, Train, Compass, ExternalLink } from 'lucide-react';
 import { SITE_CONFIG } from '../config/site';
 
@@ -12,6 +12,8 @@ const NEARBY_SPOTS = [
 ];
 
 export const LocationMap: React.FC = () => {
+  const [mapError, setMapError] = useState(false);
+
   return (
     <div className="bg-white rounded-3xl border border-[#EAE2D5] shadow-lg overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-12">
@@ -92,20 +94,41 @@ export const LocationMap: React.FC = () => {
         {/* Right Side Map Preview & Nearby Spots */}
         <div className="lg:col-span-7 flex flex-col justify-between p-6 sm:p-10 bg-[#FAF7F2]">
           
-          {/* Simulated Map Graphic Container */}
-          <div className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden border border-[#EAE2D5] shadow-inner group">
-            {/* Styled Map Preview background */}
-            <iframe
-              title="Anto's Comfort Residence Location Map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62828.14856011388!2d77.46467389278918!3d10.23812543977322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0766637f8f94d9%3A0xb3ef31d044238e88!2sKodaikanal%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-              width="100%"
-              height="100%"
-              style={{ border: 0, filter: 'contrast(1.05) saturate(0.9)' }}
-              allowFullScreen={false}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="w-full h-full object-cover"
-            />
+          {/* Map Container with Graceful Fallback */}
+          <div className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden border border-[#EAE2D5] shadow-inner bg-[#EAE2D5]/30">
+            {!mapError ? (
+              <iframe
+                title="Anto's Comfort Residence Location Map"
+                src="https://maps.google.com/maps?q=10.2381,77.4892+(Anto's+Comfort+Residence,+Kodaikanal)&t=&z=14&ie=UTF8&iwloc=B&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0, filter: 'contrast(1.05) saturate(0.9)' }}
+                allowFullScreen={false}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                onError={() => setMapError(true)}
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <div className="w-full h-full flex flex-col items-center justify-center p-6 text-center space-y-3 bg-[#15291E]/5">
+                <MapPin className="w-8 h-8 text-[#C89D66]" />
+                <h4 className="font-serif text-lg font-semibold text-[#1C201D]">
+                  Anto's Comfort Residence
+                </h4>
+                <p className="text-xs text-[#6E7771] max-w-xs">
+                  {SITE_CONFIG.location.address}
+                </p>
+                <a
+                  href={SITE_CONFIG.location.googleMapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#15291E] text-white text-xs rounded-full font-medium shadow-xs hover:bg-[#1D3829]"
+                >
+                  <Navigation className="w-3.5 h-3.5" />
+                  <span>Open in Google Maps</span>
+                </a>
+              </div>
+            )}
           </div>
 
           {/* Nearby Key Attractions Grid */}

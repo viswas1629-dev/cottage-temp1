@@ -18,25 +18,25 @@ const HERO_SLIDES: HeroSlide[] = [
     id: "slide-1",
     image: cotaFronts1,
     title: "A Quiet Escape Into Nature.",
-    subtitle: "Experience private luxury cottages surrounded by misty pine forests and mountain tranquility.",
+    subtitle: "☀️🌳",
   },
   {
     id: "slide-2",
     image: cotaBacks2,
     title: "Timeless Comfort in the Hills.",
-    subtitle: "Stone fireplaces, teakwood interiors, and floor-to-ceiling vistas of the Western Ghats.",
+    subtitle: "🗻😌",
   },
   {
     id: "slide-3",
     image: cotaS3,
     title: "Awaken Above the Clouds.",
-    subtitle: "Step out onto your private veranda as morning fog gently rolls through the valley.",
+    subtitle: "⛅✨",
   },
   {
     id: "slide-4",
     image: cotaS4,
     title: "A Peaceful & Comfortable Stay",
-    subtitle: "A clean, comfortable, and safe cottage environment for family and group retreats.",
+    subtitle: "🏕️😴",
   }
 ];
 

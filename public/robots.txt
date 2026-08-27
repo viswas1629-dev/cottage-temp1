@@ -1,0 +1,6 @@
+# Allow all crawlers full access to public pages
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://antoscomfortresidence.com/sitemap.xml
