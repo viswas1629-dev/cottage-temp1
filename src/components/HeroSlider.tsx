@@ -35,8 +35,8 @@ const HERO_SLIDES: HeroSlide[] = [
   {
     id: "slide-4",
     image: cotaS4,
-    title: "Fireside Evening Stargazing.",
-    subtitle: "Gather around sunken stone fire pits beneath crystal clear, zero-light-pollution skies.",
+    title: "A Peaceful & Comfortable Stay",
+    subtitle: "A clean, comfortable, and safe cottage environment for family and group retreats.",
   }
 ];
 
@@ -57,7 +57,7 @@ export const HeroSlider: React.FC = () => {
   const currentSlide = HERO_SLIDES[currentIndex];
 
   return (
-    <section className="relative w-full h-screen min-h-[650px] overflow-hidden flex items-center justify-center bg-[#0F1D15]">
+    <section className="relative w-full h-[100svh] min-h-[580px] sm:min-h-[650px] overflow-hidden flex items-center justify-center bg-[#0F1D15]">
       
       {/* Background Slideshow Images */}
       {HERO_SLIDES.map((slide, index) => {
@@ -75,7 +75,7 @@ export const HeroSlider: React.FC = () => {
             <img
               src={slide.image}
               alt={slide.title}
-              className="w-full h-full object-cover object-center transform scale-105 animate-pulse-glow"
+              className="w-full h-full object-cover object-[center_35%] md:object-center transform scale-105 animate-pulse-glow"
               loading={index === 0 ? 'eager' : 'lazy'}
             />
           </div>
@@ -87,23 +87,25 @@ export const HeroSlider: React.FC = () => {
       <div className="absolute inset-0 z-20 bg-radial-vignette opacity-50 pointer-events-none" />
 
       {/* Hero Content Container */}
-      <div className="relative z-30 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white flex flex-col items-center justify-center pt-16 sm:pt-20">
+      <div className="relative z-30 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white flex flex-col items-center justify-center pt-14 sm:pt-20 pb-16 sm:pb-20">
 
         {/* Dynamic Heading */}
-        <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-normal tracking-tight leading-[1.08] text-white max-w-4xl drop-shadow-lg transition-all duration-700">
+        <h1 className="font-serif text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-normal tracking-tight leading-[1.12] sm:leading-[1.08] text-white max-w-4xl drop-shadow-lg transition-all duration-700 px-2 sm:px-0">
           {currentSlide.title}
         </h1>
 
         {/* Subtitle / Description */}
-        <p className="mt-6 text-base sm:text-lg md:text-xl font-sans text-white/85 max-w-2xl font-light leading-relaxed drop-shadow-md">
-          {currentSlide.subtitle}
-        </p>
+        {currentSlide.subtitle && currentSlide.subtitle.trim().length > 0 && (
+          <p className="mt-4 sm:mt-6 text-sm sm:text-lg md:text-xl font-sans text-white/85 max-w-2xl font-light leading-relaxed drop-shadow-md px-4">
+            {currentSlide.subtitle}
+          </p>
+        )}
 
         {/* CTA Button Group */}
-        <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+        <div className="mt-6 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 w-full max-w-xs sm:max-w-none sm:w-auto px-4 sm:px-0">
           <a
             href="#accommodations"
-            className="w-full sm:w-auto px-8 py-4 bg-[#FAF7F2] text-[#15291E] hover:bg-[#EAE2D5] font-semibold text-sm rounded-full shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 group cursor-pointer"
+            className="w-full sm:w-auto px-7 py-3.5 sm:px-8 sm:py-4 bg-[#FAF7F2] text-[#15291E] hover:bg-[#EAE2D5] font-semibold text-xs sm:text-sm rounded-full shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 group cursor-pointer"
           >
             <span>Explore Accommodations</span>
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -113,24 +115,24 @@ export const HeroSlider: React.FC = () => {
             label="Enquire on WhatsApp"
             size="lg"
             variant="secondary"
-            className="w-full sm:w-auto"
+            className="w-full sm:w-auto text-xs sm:text-sm py-3.5 sm:py-4 px-7 sm:px-8"
           />
         </div>
       </div>
 
-      {/* Progress Indicators (Requirement 7) */}
-      <div className="absolute bottom-8 sm:bottom-12 inset-x-0 z-30 max-w-4xl mx-auto px-6">
-        <div className="grid grid-cols-4 gap-3 sm:gap-6 items-center">
+      {/* Progress Indicators */}
+      <div className="absolute bottom-5 sm:bottom-10 inset-x-0 z-30 max-w-4xl mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-4 gap-2 sm:gap-6 items-center">
           {HERO_SLIDES.map((slide, index) => {
             const isActive = index === currentIndex;
             return (
               <button
                 key={slide.id}
                 onClick={() => setCurrentIndex(index)}
-                className="group flex flex-col gap-1.5 text-left focus:outline-none cursor-pointer"
+                className="group flex flex-col gap-1 sm:gap-1.5 text-left focus:outline-none cursor-pointer"
                 aria-label={`Jump to slide ${index + 1}`}
               >
-                <div className="flex items-center justify-between text-[11px] sm:text-xs font-mono font-medium tracking-wider text-[#FAF7F2]/70 group-hover:text-white transition-colors">
+                <div className="flex items-center justify-between text-[10px] sm:text-xs font-mono font-medium tracking-wider text-[#FAF7F2]/70 group-hover:text-white transition-colors">
                   <span>Image 0{index + 1}</span>
                   <span className="hidden sm:inline text-[10px] text-[#C89D66] font-sans">
                     {isActive ? 'Active' : ''}

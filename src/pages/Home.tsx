@@ -8,7 +8,6 @@ import WhatsAppButton from '../components/WhatsAppButton';
 import { BEDROOM_CATEGORIES } from '../data/bedrooms';
 import { EXPERIENCES } from '../data/experiences';
 import { GALLERY_ITEMS } from '../data/gallery';
-import { REVIEWS } from '../data/reviews';
 import cotaFronts1 from '../assets/images/cota-fronts1.webp';
 
 export const Home: React.FC = () => {
@@ -20,7 +19,7 @@ export const Home: React.FC = () => {
   };
 
   return (
-    <div className="w-full bg-[#FAF7F2]">
+    <div className="w-full bg-[#FAF7F2] overflow-x-hidden">
       
       {/* 1. Cinematic Hero */}
       <HeroSlider />
@@ -350,47 +349,7 @@ export const Home: React.FC = () => {
         <LocationMap />
       </section>
 
-      {/* 9. Reviews & Testimonials */}
-      <section className="py-20 bg-[#15291E] text-[#FAF7F2]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-14 space-y-3">
-            <span className="text-xs font-mono uppercase tracking-widest text-[#C89D66]">
-              Guest Experiences
-            </span>
-            <h2 className="font-serif text-3xl sm:text-5xl font-normal text-white">
-              Loved by Nature Seekers
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {REVIEWS.map((rev) => (
-              <div key={rev.id} className="bg-white/5 backdrop-blur-md p-8 rounded-2xl border border-white/10 space-y-6">
-                <div className="flex items-center gap-1 text-[#C89D66]">
-                  {[...Array(rev.rating)].map((_, i) => (
-                    <Sparkles key={i} className="w-4 h-4 fill-[#C89D66]" />
-                  ))}
-                </div>
-                <p className="text-sm font-serif italic text-white/90 leading-relaxed">
-                  "{rev.comment}"
-                </p>
-                <div className="pt-4 border-t border-white/10 flex items-center gap-3">
-                  <img
-                    src={rev.avatar}
-                    alt={rev.author}
-                    className="w-10 h-10 rounded-full object-cover border border-[#C89D66]"
-                  />
-                  <div>
-                    <h4 className="text-xs font-semibold text-white">{rev.author}</h4>
-                    <span className="text-[11px] text-[#C89D66] block">{rev.roomBooked}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 10. Final WhatsApp CTA Banner */}
+      {/* 9. Final WhatsApp CTA Banner */}
       <section className="py-20 bg-[#FAF7F2] border-t border-[#EAE2D5]">
         <div className="max-w-4xl mx-auto px-4 text-center space-y-6">
           <span className="text-xs font-mono uppercase tracking-widest text-[#C89D66] font-medium">

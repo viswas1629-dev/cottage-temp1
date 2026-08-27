@@ -70,23 +70,23 @@ export const Navbar: React.FC = () => {
           {/* Brand Logo */}
           <Link
             to="/"
-            className="flex items-center gap-3 group focus:outline-none"
+            className="flex items-center gap-2 sm:gap-3 group focus:outline-none flex-shrink min-w-0"
             aria-label="Anto's Comfort Residence Home"
           >
-            <div className={`p-2 rounded-full transition-transform duration-300 group-hover:scale-105 ${
+            <div className={`p-1.5 sm:p-2 rounded-full transition-transform duration-300 group-hover:scale-105 flex-shrink-0 ${
               isScrolled || (!isHomePage && !mobileMenuOpen)
                 ? 'bg-[#15291E] text-[#FAF7F2]'
                 : 'bg-white/10 text-white backdrop-blur-sm border border-white/20'
             }`}>
-              <Compass className="w-5 h-5 stroke-[1.75]" />
+              <Compass className="w-4 h-4 sm:w-5 sm:h-5 stroke-[1.75]" />
             </div>
-            <div className="flex flex-col">
-              <span className={`font-serif text-xl sm:text-2xl font-bold tracking-tight leading-none ${
+            <div className="flex flex-col min-w-0">
+              <span className={`font-serif text-base sm:text-2xl font-bold tracking-tight leading-none truncate ${
                 isScrolled || (!isHomePage && !mobileMenuOpen) ? 'text-[#15291E]' : 'text-white'
               }`}>
                 {SITE_CONFIG.name}
               </span>
-              <span className={`text-[10px] tracking-widest uppercase font-sans mt-0.5 ${
+              <span className={`text-[9px] sm:text-[10px] tracking-widest uppercase font-sans mt-0.5 truncate ${
                 isScrolled || (!isHomePage && !mobileMenuOpen) ? 'text-[#6E7771]' : 'text-white/70'
               }`}>
                 Cottage & Nature Stay
@@ -127,24 +127,24 @@ export const Navbar: React.FC = () => {
           </div>
 
           {/* Mobile Menu Toggle Button */}
-          <div className="flex md:hidden items-center gap-2">
+          <div className="flex md:hidden items-center gap-1.5 sm:gap-2 flex-shrink-0">
             <WhatsAppButton
               label="Enquire"
               size="sm"
               variant={isScrolled || !isHomePage ? 'primary' : 'secondary'}
               showArrow={false}
-              className="px-3 py-1.5 text-xs"
+              className="px-2.5 sm:px-3 py-1.5 text-xs"
             />
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className={`p-2 rounded-lg transition-colors focus:outline-none ${
+              className={`p-1.5 sm:p-2 rounded-lg transition-colors focus:outline-none ${
                 isScrolled || (!isHomePage && !mobileMenuOpen)
                   ? 'text-[#15291E] hover:bg-[#EAE2D5]'
                   : 'text-white hover:bg-white/10'
               }`}
               aria-label="Toggle menu"
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {mobileMenuOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
             </button>
           </div>
         </div>
@@ -152,7 +152,7 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Animated Full Navigation Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-x-0 top-[60px] bottom-0 bg-[#0F1D15] text-[#FAF7F2] z-50 flex flex-col justify-between px-6 py-8 animate-fadeIn overflow-y-auto">
+        <div className="md:hidden fixed inset-x-0 top-[56px] sm:top-[64px] bottom-0 bg-[#0F1D15] text-[#FAF7F2] z-50 flex flex-col justify-between px-6 py-8 animate-fadeIn overflow-y-auto">
           <div className="space-y-6">
             <p className="text-xs uppercase tracking-widest text-[#C89D66] font-medium border-b border-white/10 pb-2">
               Navigation Menu

@@ -33,7 +33,7 @@ export const Footer: React.FC = () => {
             </Link>
 
             <p className="text-sm font-sans text-white/75 font-light leading-relaxed max-w-md">
-              A private luxury retreat offering 9 individual rooms surrounded by pine forests, mountain mist, and stargazing skies in Kodaikanal. Experience serenity without compromise.
+              A private luxury retreat rooms surrounded by pine forests, mountain mist, and stargazing skies in Kodaikanal. Experience serenity without compromise.
             </p>
 
             <div className="pt-2">
