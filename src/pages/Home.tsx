@@ -35,21 +35,19 @@ export const Home: React.FC = () => {
             </div>
 
             <h2 className="font-serif text-3xl sm:text-5xl font-normal leading-[1.15] text-[#1C201D]">
-              A Sanctuary Built in Harmony With Misty Pine Forests.
+              Comfort, Nature & Peace in Kodaikanal.
             </h2>
 
             <p className="text-base text-[#3D4540] font-sans font-light leading-relaxed">
-              Tucked away on a quiet mountain ridge in Kodaikanal, Anto's Comfort Residence is an exclusive collection of 9 standalone luxury cottages. Each accommodation is thoughtfully crafted with natural river stone, fragrant cedar timber, and floor-to-ceiling glass walls that welcome the morning mist.
+              Located in a beautiful and peaceful part of Kodaikanal, Anto's Comfort Residence offers a comfortable stay with refreshing views of the surrounding landscape. With a calm atmosphere, a safe and secure setting, and warm hospitality, we aim to make every stay simple, relaxing, and genuinely memorable.
             </p>
 
             <div className="grid grid-cols-2 gap-6 pt-4 border-t border-[#EAE2D5]">
               <div>
-                <span className="font-serif text-3xl font-bold text-[#15291E] block">9</span>
-                <span className="text-xs text-[#6E7771] font-sans uppercase tracking-wider">Private Cottages</span>
+                <span className="font-serif text-3xl font-bold text-[#15291E] block">Peaceful Location</span>
               </div>
               <div>
-                <span className="font-serif text-3xl font-bold text-[#15291E] block">7,200 ft</span>
-                <span className="text-xs text-[#6E7771] font-sans uppercase tracking-wider">Mountain Elevation</span>
+                <span className="font-serif text-3xl font-bold text-[#15291E] block">Nature-Facing Stay</span>
               </div>
             </div>
 
