@@ -161,9 +161,7 @@ export const Footer: React.FC = () => {
           <p>© {new Date().getFullYear()} {SITE_CONFIG.name} Cottages. All rights reserved.</p>
 
           <div className="flex items-center gap-6">
-            <span className="hover:text-white cursor-pointer">Privacy Policy</span>
-            <span className="hover:text-white cursor-pointer">Terms & Conditions</span>
-            <span className="hover:text-white cursor-pointer">House Rules</span>
+            <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
           </div>
 
           <p className="flex items-center gap-1">
