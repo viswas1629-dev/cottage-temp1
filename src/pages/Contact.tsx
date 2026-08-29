@@ -1,24 +1,71 @@
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Send, MessageCircle, CheckCircle2, Sun, CloudRain } from 'lucide-react';
+import { Phone, Mail, MapPin, Send, MessageCircle, CheckCircle2, Sun, CloudRain, AlertCircle } from 'lucide-react';
 import { SITE_CONFIG } from '../config/site';
 import WhatsAppButton from '../components/WhatsAppButton';
 import LocationMap from '../components/LocationMap';
+import { generateWhatsAppLink } from '../utils/whatsapp';
 
 export const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
     email: '',
-    roomInterest: 'Any Cottage',
-    dates: '',
+    roomInterest: 'Any Bedroom',
     message: ''
   });
 
+  const [validationError, setValidationError] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const [whatsappUrl, setWhatsappUrl] = useState('');
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    setValidationError('');
+
+    // Field validation
+    if (!formData.name.trim()) {
+      setValidationError('Please enter your full name.');
+      return;
+    }
+
+    if (!formData.phone.trim()) {
+      setValidationError('Please enter your phone / WhatsApp number.');
+      return;
+    }
+
+    if (!formData.message.trim()) {
+      setValidationError('Please enter your intended dates or message.');
+      return;
+    }
+
+    // Format WhatsApp message
+    const emailText = formData.email.trim() ? formData.email.trim() : 'Not provided';
+    const roomText = formData.roomInterest || 'Any Bedroom';
+
+    const rawMessage = `Hello ${SITE_CONFIG.name},
+
+I would like to enquire about a stay.
+
+*Guest Details*
+Name: ${formData.name.trim()}
+Phone / WhatsApp: ${formData.phone.trim()}
+Email: ${emailText}
+
+*Stay Details*
+Bedroom Preference: ${roomText}
+Preferred Dates / Message:
+${formData.message.trim()}
+
+Please share the availability and booking details.
+
+Thank you.`;
+
+    const generatedUrl = generateWhatsAppLink(undefined, rawMessage);
+    setWhatsappUrl(generatedUrl);
     setSubmitted(true);
+
+    // Open WhatsApp in a new tab/window
+    window.open(generatedUrl, '_blank');
   };
 
   return (
@@ -40,28 +87,10 @@ export const Contact: React.FC = () => {
         </div>
 
         {/* Contact Info Cards + Form Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
           {/* Left Column: Direct Details */}
           <div className="lg:col-span-5 space-y-6">
-            
-            <div className="bg-[#15291E] text-[#FAF7F2] p-8 rounded-3xl space-y-6 shadow-md border border-white/10">
-              <h2 className="font-serif text-3xl font-normal text-white">
-                Quickest Contact
-              </h2>
-              <p className="text-xs font-sans text-white/80 font-light leading-relaxed">
-                For immediate responses regarding cottage availability and booking details, WhatsApp is our primary channel.
-              </p>
-              
-              <div className="pt-2">
-                <WhatsAppButton
-                  label="Message Us on WhatsApp"
-                  size="lg"
-                  variant="secondary"
-                  fullWidth
-                />
-              </div>
-            </div>
 
             <div className="bg-white p-8 rounded-3xl border border-[#EAE2D5] space-y-6 shadow-xs">
               <h3 className="font-serif text-2xl font-semibold text-[#1C201D]">
@@ -106,20 +135,37 @@ export const Contact: React.FC = () => {
           <div className="lg:col-span-7 bg-white p-8 sm:p-10 rounded-3xl border border-[#EAE2D5] shadow-sm">
             
             {submitted ? (
-              <div className="text-center py-12 space-y-4 animate-fadeIn">
+              <div className="text-center py-12 space-y-6 animate-fadeIn">
                 <CheckCircle2 className="w-16 h-16 text-[#15291E] mx-auto" />
-                <h3 className="font-serif text-3xl font-semibold text-[#1C201D]">
-                  Enquiry Received!
-                </h3>
-                <p className="text-sm text-[#3D4540] max-w-md mx-auto font-light">
-                  Thank you for reaching out. Our team will contact you shortly. For immediate assistance, feel free to use WhatsApp.
-                </p>
-                <div className="pt-4 flex justify-center">
-                  <WhatsAppButton
-                    label="Open WhatsApp Now"
-                    size="md"
-                    variant="primary"
-                  />
+                <div className="space-y-2">
+                  <h3 className="font-serif text-3xl font-semibold text-[#1C201D]">
+                    Your enquiry is ready on WhatsApp
+                  </h3>
+                  <p className="text-sm text-[#3D4540] max-w-md mx-auto font-light leading-relaxed">
+                    Please tap <strong>Send</strong> in WhatsApp to complete your enquiry with our team.
+                  </p>
+                </div>
+
+                <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
+                  <a
+                    href={whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto px-6 py-3.5 bg-[#15291E] text-white font-semibold text-xs rounded-full shadow-md hover:bg-[#1D3829] transition-all flex items-center justify-center gap-2"
+                  >
+                    <MessageCircle className="w-4 h-4 text-[#C89D66]" />
+                    <span>Open WhatsApp Again</span>
+                  </a>
+
+                  <button
+                    onClick={() => {
+                      setSubmitted(false);
+                      setValidationError('');
+                    }}
+                    className="w-full sm:w-auto px-6 py-3.5 border border-[#15291E] text-[#15291E] font-medium text-xs rounded-full hover:bg-[#15291E] hover:text-white transition-all cursor-pointer"
+                  >
+                    Submit Another Enquiry
+                  </button>
                 </div>
               </div>
             ) : (
@@ -129,16 +175,22 @@ export const Contact: React.FC = () => {
                     Send an Online Enquiry
                   </h2>
                   <p className="text-xs text-[#6E7771] font-sans font-light">
-                    Fill out your details below and we will get back to you with tariff and stay options.
+                    Fill out your details below to generate a pre-filled WhatsApp enquiry for our host team.
                   </p>
                 </div>
+
+                {validationError && (
+                  <div className="p-3 bg-red-50 border border-red-200 text-red-700 text-xs rounded-xl flex items-center gap-2">
+                    <AlertCircle className="w-4 h-4 flex-shrink-0" />
+                    <span>{validationError}</span>
+                  </div>
+                )}
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1">
                     <label className="text-xs font-medium text-[#1C201D]">Full Name *</label>
                     <input
                       type="text"
-                      required
                       placeholder="e.g. Rahul Sharma"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -150,8 +202,7 @@ export const Contact: React.FC = () => {
                     <label className="text-xs font-medium text-[#1C201D]">Phone / WhatsApp Number *</label>
                     <input
                       type="tel"
-                      required
-                      placeholder="+91 9999 999 999"
+                      placeholder="+91 99999 99999"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       className="w-full px-4 py-3 bg-[#FAF7F2] border border-[#EAE2D5] rounded-xl text-xs text-[#1C201D] focus:outline-none focus:border-[#15291E]"
@@ -164,7 +215,7 @@ export const Contact: React.FC = () => {
                     <label className="text-xs font-medium text-[#1C201D]">Email Address</label>
                     <input
                       type="email"
-                      placeholder="name@example.com"
+                      placeholder="name@example.com (optional)"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="w-full px-4 py-3 bg-[#FAF7F2] border border-[#EAE2D5] rounded-xl text-xs text-[#1C201D] focus:outline-none focus:border-[#15291E]"
@@ -186,7 +237,7 @@ export const Contact: React.FC = () => {
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-xs font-medium text-[#1C201D]">Intended Dates / Message</label>
+                  <label className="text-xs font-medium text-[#1C201D]">Intended Dates / Message *</label>
                   <textarea
                     rows={4}
                     placeholder="Provide preferred check-in dates and number of guests..."
