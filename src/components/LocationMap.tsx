@@ -32,7 +32,7 @@ export const LocationMap: React.FC = () => {
             </h3>
 
             <p className="text-sm font-sans text-white/80 font-light leading-relaxed">
-              Anto's Comfort Residence is situated in the peaceful Pambarpuram valley enclave, safely secluded from traffic noise while remaining just minutes away from Kodaikanal's main lake and dining spots.
+              Anto's Comfort Residence is situated in the peaceful Naidupuram valley, safely secluded from traffic noise while remaining just minutes away from Kodaikanal's main lake and dining spots.
             </p>
 
             <div className="pt-4 border-t border-white/10 space-y-4 text-xs sm:text-sm">

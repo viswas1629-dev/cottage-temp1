@@ -1,10 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Compass, MapPin, Phone, Mail, ArrowUpRight, Heart } from 'lucide-react';
 import { SITE_CONFIG } from '../config/site';
 import WhatsAppButton from './WhatsAppButton';
 
 export const Footer: React.FC = () => {
+  const location = useLocation();
+  const hideWhatsAppPages = ['/', '/about', '/contact'];
+  const shouldHideWhatsApp = hideWhatsAppPages.includes(location.pathname);
+
   return (
     <footer className="bg-[#0F1D15] text-[#FAF7F2] pt-16 pb-12 border-t border-white/10 relative overflow-hidden">
       
@@ -33,16 +37,18 @@ export const Footer: React.FC = () => {
             </Link>
 
             <p className="text-sm font-sans text-white/75 font-light leading-relaxed max-w-md">
-              A private luxury retreat rooms surrounded by pine forests, mountain mist, and stargazing skies in Kodaikanal. Experience serenity without compromise.
+              Enjoy a peaceful stay in Kodaikanal with comfortable rooms, beautiful surroundings, and a welcoming atmosphere.
             </p>
 
-            <div className="pt-2">
-              <WhatsAppButton
-                label="Direct WhatsApp Enquiry"
-                size="md"
-                variant="secondary"
-              />
-            </div>
+            {!shouldHideWhatsApp && (
+              <div className="pt-2">
+                <WhatsAppButton
+                  label="Direct WhatsApp Enquiry"
+                  size="md"
+                  variant="secondary"
+                />
+              </div>
+            )}
           </div>
 
           {/* Column 2: Navigation Links */}
