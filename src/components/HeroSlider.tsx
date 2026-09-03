@@ -57,7 +57,7 @@ export const HeroSlider: React.FC = () => {
   const currentSlide = HERO_SLIDES[currentIndex];
 
   return (
-    <section className="relative w-full h-[100svh] min-h-[580px] sm:min-h-[650px] overflow-hidden flex items-center justify-center bg-[#0F1D15]">
+    <section id="home" className="relative w-full h-[100svh] min-h-[580px] sm:min-h-[650px] overflow-hidden flex items-center justify-center bg-[#0F1D15]">
       
       {/* Background Slideshow Images */}
       {HERO_SLIDES.map((slide, index) => {

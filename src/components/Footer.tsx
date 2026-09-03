@@ -9,6 +9,41 @@ export const Footer: React.FC = () => {
   const hideWhatsAppPages = ['/', '/about', '/contact'];
   const shouldHideWhatsApp = hideWhatsAppPages.includes(location.pathname);
 
+  const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (location.pathname === '/') {
+      e.preventDefault();
+      const heroElement = document.getElementById('home');
+      if (heroElement) {
+        heroElement.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+      }
+    }
+  };
+
+  const handleAboutClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (location.pathname === '/about') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    }
+  };
+
+  const handleSectionClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    if (location.pathname === '/') {
+      e.preventDefault();
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const headerOffset = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
+  };
+
   return (
     <footer className="bg-[#0F1D15] text-[#FAF7F2] pt-16 pb-12 border-t border-white/10 relative overflow-hidden">
       
@@ -22,7 +57,7 @@ export const Footer: React.FC = () => {
           
           {/* Column 1: Brand Info */}
           <div className="lg:col-span-2 space-y-6">
-            <Link to="/" className="inline-flex items-center gap-3 group">
+            <Link to="/" onClick={handleHomeClick} className="inline-flex items-center gap-3 group">
               <div className="p-2.5 rounded-full bg-white/10 text-white border border-white/20 group-hover:scale-105 transition-transform">
                 <Compass className="w-6 h-6 stroke-[1.75]" />
               </div>
@@ -58,13 +93,13 @@ export const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-2.5 text-sm font-sans text-white/80 font-light">
               <li>
-                <Link to="/" className="hover:text-white transition-colors">Home</Link>
+                <Link to="/" onClick={handleHomeClick} className="hover:text-white transition-colors">Home</Link>
               </li>
               <li>
-                <a href="#experiences" className="hover:text-white transition-colors">Nature Experiences</a>
+                <Link to="/#experiences" onClick={(e) => handleSectionClick(e, 'experiences')} className="hover:text-white transition-colors">Nature Experiences</Link>
               </li>
               <li>
-                <Link to="/about" className="hover:text-white transition-colors">About {SITE_CONFIG.name}</Link>
+                <Link to="/about" onClick={handleAboutClick} className="hover:text-white transition-colors">About {SITE_CONFIG.name}</Link>
               </li>
               <li>
                 <Link to="/contact" className="hover:text-white transition-colors">Contact & Directions</Link>
@@ -79,30 +114,33 @@ export const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-2.5 text-xs font-sans text-white/75 font-light">
               <li>
-                <a
-                  href="#accommodations"
+                <Link
+                  to="/#accommodations"
+                  onClick={(e) => handleSectionClick(e, 'accommodations')}
                   className="hover:text-[#C89D66] transition-colors flex items-center justify-between"
                 >
                   <span>Single Bedroom</span>
                   <ArrowUpRight className="w-3 h-3 opacity-50 flex-shrink-0 ml-1" />
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#accommodations"
+                <Link
+                  to="/#accommodations"
+                  onClick={(e) => handleSectionClick(e, 'accommodations')}
                   className="hover:text-[#C89D66] transition-colors flex items-center justify-between"
                 >
                   <span>Double Bedroom</span>
                   <ArrowUpRight className="w-3 h-3 opacity-50 flex-shrink-0 ml-1" />
-                </a>
+                </Link>
               </li>
               <li className="pt-2">
-                <a
-                  href="#accommodations"
+                <Link
+                  to="/#accommodations"
+                  onClick={(e) => handleSectionClick(e, 'accommodations')}
                   className="text-[#C89D66] hover:underline font-medium block"
                 >
                   Choose Your Bedroom →
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

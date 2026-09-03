@@ -137,7 +137,7 @@ export const PrivacyPolicy: React.FC = () => {
               Children's Privacy
             </h2>
             <p className="text-sm font-light leading-relaxed">
-              Our website provides general accommodation information intended for adult travelers and families. We do not knowingly collect personal details from children under the age of 18.
+              Our website provides general accommodation information intended for adult travelers and families. We do not knowingly collect personal details from children.
             </p>
           </section>
 
