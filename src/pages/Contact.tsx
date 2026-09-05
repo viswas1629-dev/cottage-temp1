@@ -78,7 +78,7 @@ Thank you.`;
             <MessageCircle className="w-3.5 h-3.5 text-[#C89D66]" />
             <span>Location, Directions & Reservations</span>
           </div>
-          <h1 className="font-serif text-4xl sm:text-6xl font-normal text-[#1C201D]">
+          <h1 className="font-serif text-4xl sm:text-6xl font-normal text-[#1714b8]">
             Contact & Directions
           </h1>
           <p className="text-base text-[#3D4540] font-sans font-light leading-relaxed">
@@ -93,7 +93,7 @@ Thank you.`;
           <div className="lg:col-span-5 space-y-6">
 
             <div className="bg-white p-8 rounded-3xl border border-[#EAE2D5] space-y-6 shadow-xs">
-              <h3 className="font-serif text-2xl font-semibold text-[#1C201D]">
+              <h3 className="font-serif text-2xl font-semibold text-[#3534FB]">
                 Contact & Address
               </h3>
 
@@ -171,7 +171,7 @@ Thank you.`;
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
-                  <h2 className="font-serif text-3xl font-semibold text-[#1C201D]">
+                  <h2 className="font-serif text-3xl font-semibold text-[#3534FB]">
                     Send an Online Enquiry
                   </h2>
                   <p className="text-xs text-[#6E7771] font-sans font-light">
@@ -268,22 +268,22 @@ Thank you.`;
 
         {/* Climate & Transport Pick-up Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
-          <div className="bg-white p-8 rounded-3xl border border-[#EAE2D5] space-y-4 shadow-xs">
+          <div className="bg-white p-8 rounded-3xl border border-[#15291E] space-y-4 shadow-xs">
             <div className="flex items-center gap-3">
               <Sun className="w-6 h-6 text-[#C89D66]" />
-              <h3 className="font-serif text-2xl font-semibold text-[#1C201D]">Best Time to Visit</h3>
+              <h3 className="font-serif text-2xl font-semibold text-[#3534FB]">Best Time to Visit</h3>
             </div>
-            <p className="text-xs sm:text-sm text-[#3D4540] font-sans font-light leading-relaxed">
+            <p className="text-xs sm:text-sm text-[#000000] font-sans font-light leading-relaxed">
               Kodaikanal enjoys pleasant, crisp weather throughout the year. Spring & Summer (September to May) bring clear skies and cool breezes (15°C to 20°C). Monsoon season (June to August) paints the mountains in vibrant emerald hues with misty rain and cascading waterfalls.
             </p>
           </div>
 
-          <div className="bg-white p-8 rounded-3xl border border-[#EAE2D5] space-y-4 shadow-xs">
+          <div className="bg-white p-8 rounded-3xl border border-[#15291E] space-y-4 shadow-xs">
             <div className="flex items-center gap-3">
-              <CloudRain className="w-6 h-6 text-[#15291E]" />
-              <h3 className="font-serif text-2xl font-semibold text-[#1C201D]">Pick-up & Transfer Assistance</h3>
+              <CloudRain className="w-6 h-6 text-[#C89D66]" />
+              <h3 className="font-serif text-2xl font-semibold text-[#3534FB]">Pick-up & Transfer Assistance</h3>
             </div>
-            <p className="text-xs sm:text-sm text-[#3D4540] font-sans font-light leading-relaxed">
+            <p className="text-xs sm:text-sm text-[#000000] font-sans font-light leading-relaxed">
               We can arrange private chauffeured car pick-up services from Madurai Airport, Coimbatore Airport, or Kodai Road Railway Station directly to our cottage gates upon request.
             </p>
             <div className="pt-2">

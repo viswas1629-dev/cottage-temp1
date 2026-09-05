@@ -34,7 +34,7 @@ export const Home: React.FC = () => {
               <span>Welcome to Anto's Comfort Residence </span>
             </div>
 
-            <h2 className="font-serif text-3xl sm:text-5xl font-normal leading-[1.15] text-[#1C201D]">
+            <h2 className="font-serif text-3xl sm:text-5xl font-normal leading-[1.15] text-[#1714b8]">
               Comfort, Nature & Peace in Kodaikanal.
             </h2>
 
@@ -44,10 +44,10 @@ export const Home: React.FC = () => {
 
             <div className="grid grid-cols-2 gap-6 pt-4 border-t border-[#EAE2D5]">
               <div>
-                <span className="font-serif text-3xl font-bold text-[#15291E] block">Peaceful Location</span>
+                <span className="font-serif text-3xl font-bold text-[#3534FB] block">Peaceful Location</span>
               </div>
               <div>
-                <span className="font-serif text-3xl font-bold text-[#15291E] block">Nature-Facing Stay</span>
+                <span className="font-serif text-3xl font-bold text-[#3534FB] block">Nature-Facing Stay</span>
               </div>
             </div>
 
@@ -96,7 +96,7 @@ export const Home: React.FC = () => {
             <span className="text-xs font-mono uppercase tracking-widest text-[#C89D66] font-medium">
               OUR ACCOMMODATION
             </span>
-            <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#1C201D]">
+            <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#1714b8]">
               Choose Your Bedroom
             </h2>
             <p className="text-sm text-[#3D4540] font-sans font-light leading-relaxed">
@@ -120,7 +120,7 @@ export const Home: React.FC = () => {
           <span className="text-xs font-mono uppercase tracking-widest text-[#C89D66] font-medium">
             THE ANTO'S COMFORT RESIDENCE EXPERIENCE
           </span>
-          <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#1C201D]">
+          <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#1714b8]">
             Comfortable Stay, Peaceful Moments.
           </h2>
           <p className="text-sm sm:text-base text-[#3D4540] font-sans font-light leading-relaxed">
@@ -190,7 +190,7 @@ export const Home: React.FC = () => {
             <span className="text-xs font-mono uppercase tracking-widest text-[#C89D66] font-medium">
               CURATED ACTIVITIES
             </span>
-            <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#1C201D]">
+            <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#1714b8]">
               Experiences at Anto's Comfort Residence
             </h2>
             <p className="text-sm text-[#3D4540] font-sans font-light">
@@ -310,7 +310,7 @@ export const Home: React.FC = () => {
             <span className="text-xs font-mono uppercase tracking-widest text-[#C89D66] font-medium">
               Visual Journey
             </span>
-            <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#1C201D]">
+            <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#1714b8]">
               Moments at Anto's Comfort Residence
             </h2>
           </div>
@@ -353,7 +353,7 @@ export const Home: React.FC = () => {
           <span className="text-xs font-mono uppercase tracking-widest text-[#C89D66] font-medium">
             Plan Your Stay
           </span>
-          <h2 className="font-serif text-4xl sm:text-6xl font-normal text-[#1C201D]">
+          <h2 className="font-serif text-4xl sm:text-6xl font-normal text-[#1714b8]">
             Ready for a Quiet Escape into Nature?
           </h2>
           <p className="text-base text-[#3D4540] font-sans font-light max-w-xl mx-auto">

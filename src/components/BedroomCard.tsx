@@ -53,12 +53,12 @@ export const BedroomCard: React.FC<BedroomCardProps> = ({ bedroom, index = 0 }) 
             <BedDouble className="w-5 h-5 text-[#C89D66]" />
           </div>
 
-          <p className="text-xs font-mono uppercase tracking-widest text-[#C89D66] font-medium">
+          <p className="text-s font-mono uppercase tracking-widest text-[#3633FF] font-medium">
             {bedroom.tagline}
           </p>
 
           {/* Simple Indian-friendly English Description */}
-          <p className="text-sm text-[#3D4540] font-sans font-light leading-relaxed">
+          <p className="text-s text-[#000000] font-sans font-light leading-relaxed">
             {bedroom.description}
           </p>
 

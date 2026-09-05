@@ -15,7 +15,7 @@ export const About: React.FC = () => {
             <Compass className="w-3.5 h-3.5 text-[#C89D66]" />
             <span>Our Story & Philosophy</span>
           </div>
-          <h1 className="font-serif text-4xl sm:text-6xl font-normal text-[#1C201D]">
+          <h1 className="font-serif text-4xl sm:text-6xl font-normal text-[#3534FB]">
             Crafted for Peace, Privacy & Nature
           </h1>
           <p className="text-base text-[#3D4540] font-sans font-light leading-relaxed">
@@ -26,13 +26,13 @@ export const About: React.FC = () => {
         {/* Story Section */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-white p-8 sm:p-12 rounded-3xl border border-[#EAE2D5] shadow-sm">
           <div className="lg:col-span-6 space-y-6">
-            <h2 className="font-serif text-3xl sm:text-4xl font-normal text-[#1C201D]">
+            <h2 className="font-serif text-3xl sm:text-4xl font-normal text-[#3534FB]">
               Building Without Distributing the Forest
             </h2>
-            <p className="text-sm sm:text-base text-[#3D4540] font-sans font-light leading-relaxed">
+            <p className="text-sm sm:text-base text-[#000000] font-sans font-light leading-relaxed">
               When we first walked through this hillside parcel in Kodaikanal, we made a strict promise: not a single mature pine tree would be felled. Instead, our cottage were meticulously positioned around the natural contours of the rocks and trees.
             </p>
-            <p className="text-sm text-[#3D4540] font-sans font-light leading-relaxed">
+            <p className="text-s text-[#000000] font-sans font-light leading-relaxed">
               Every stone used in our hearth fireplaces was reclaimed from local river beds, and all timber panelling is sourced from sustainable cedar plantations. The result is an accommodation that feels like it has organically belonged to the mountain for decades.
             </p>
           </div>
@@ -48,26 +48,26 @@ export const About: React.FC = () => {
 
         {/* Core Values */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="p-8 bg-white rounded-2xl border border-[#EAE2D5] space-y-4">
+          <div className="p-8 bg-white rounded-2xl border border-[#15291E] space-y-4">
             <Shield className="w-8 h-8 text-[#C89D66]" />
-            <h3 className="font-serif text-2xl font-semibold text-[#1C201D]">Absolute Privacy</h3>
-            <p className="text-xs text-[#6E7771] font-sans font-light leading-relaxed">
+            <h3 className="font-serif text-2xl font-semibold text-[#3534FB]">Absolute Privacy</h3>
+            <p className="text-sm text-[#000000] font-sans font-light leading-relaxed">
               Each cottage maintains wide buffer zones of native flora, ensuring complete visual and auditory privacy for every guest stay.
             </p>
           </div>
 
-          <div className="p-8 bg-white rounded-2xl border border-[#EAE2D5] space-y-4">
+          <div className="p-8 bg-white rounded-2xl border border-[#15291E] space-y-4">
             <Heart className="w-8 h-8 text-[#C89D66]" />
-            <h3 className="font-serif text-2xl font-semibold text-[#1C201D]">Warm Hospitality</h3>
-            <p className="text-xs text-[#6E7771] font-sans font-light leading-relaxed">
+            <h3 className="font-serif text-2xl font-semibold text-[#3534FB]">Warm Hospitality</h3>
+            <p className="text-sm text-[#000000] font-sans font-light leading-relaxed">
               Our small host team is dedicated to personal service — from lighting your evening fireplace to brewing fresh filter coffee at dawn.
             </p>
           </div>
 
-          <div className="p-8 bg-white rounded-2xl border border-[#EAE2D5] space-y-4">
+          <div className="p-8 bg-white rounded-2xl border border-[#15291E] space-y-4">
             <Trees className="w-8 h-8 text-[#C89D66]" />
-            <h3 className="font-serif text-2xl font-semibold text-[#1C201D]">Eco-Conscious</h3>
-            <p className="text-xs text-[#6E7771] font-sans font-light leading-relaxed">
+            <h3 className="font-serif text-2xl font-semibold text-[#3534FB]">Eco-Conscious</h3>
+            <p className="text-sm text-[#000000] font-sans font-light leading-relaxed">
               Rainwater harvesting, solar water heating, zero single-use plastics, and organic waste composting on property grounds.
             </p>
           </div>

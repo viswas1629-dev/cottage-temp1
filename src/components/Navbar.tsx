@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Compass, Phone } from 'lucide-react';
-import { SITE_CONFIG } from '../config/site';
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -79,14 +78,39 @@ export const Navbar: React.FC = () => {
             }`}>
               <Compass className="w-4 h-4 sm:w-5 sm:h-5 stroke-[1.75]" />
             </div>
-            <div className="flex flex-col min-w-0">
-              <span className={`font-serif text-base sm:text-2xl font-bold tracking-tight leading-none truncate ${
-                isScrolled || (!isHomePage && !mobileMenuOpen) ? 'text-[#15291E]' : 'text-white'
-              }`}>
-                {SITE_CONFIG.name}
-              </span>
-              <span className={`text-[9px] sm:text-[10px] tracking-widest uppercase font-sans mt-0.5 truncate ${
-                isScrolled || (!isHomePage && !mobileMenuOpen) ? 'text-[#6E7771]' : 'text-white/70'
+            <div className="flex flex-col min-w-0 justify-center">
+              {/* Desktop / Tablet Artistic Wordmark */}
+              <div className="hidden sm:flex items-baseline gap-1.5 leading-none">
+                <span className={`font-serif text-lg md:text-xl lg:text-2xl font-semibold tracking-tight ${
+                  isScrolled || (!isHomePage && !mobileMenuOpen) ? 'text-[#15291E]' : 'text-white'
+                }`}>
+                  Anto's Comfort
+                </span>
+                <span className={`font-serif italic text-lg md:text-xl lg:text-2xl font-semibold ${
+                  isScrolled || (!isHomePage && !mobileMenuOpen) ? 'text-[#C89D66]' : 'text-[#E5BE84]'
+                }`}>
+                  Residence
+                </span>
+              </div>
+
+              {/* Mobile Compact Artistic Wordmark */}
+              <div className="flex sm:hidden flex-col leading-tight">
+                <div className="flex items-baseline gap-1">
+                  <span className={`font-serif text-[13.5px] font-semibold tracking-tight ${
+                    isScrolled || (!isHomePage && !mobileMenuOpen) ? 'text-[#15291E]' : 'text-white'
+                  }`}>
+                    Anto's Comfort
+                  </span>
+                  <span className={`font-serif italic text-[13.5px] font-semibold ${
+                    isScrolled || (!isHomePage && !mobileMenuOpen) ? 'text-[#C89D66]' : 'text-[#E5BE84]'
+                  }`}>
+                    Residence
+                  </span>
+                </div>
+              </div>
+
+              <span className={`text-[8px] sm:text-[9.5px] tracking-[0.18em] uppercase font-sans mt-0.5 font-medium truncate ${
+                isScrolled || (!isHomePage && !mobileMenuOpen) ? 'text-[#6E7771]' : 'text-white/75'
               }`}>
                 Cottage & Nature Stay
               </span>

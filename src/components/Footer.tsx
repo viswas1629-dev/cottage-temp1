@@ -62,10 +62,15 @@ export const Footer: React.FC = () => {
                 <Compass className="w-6 h-6 stroke-[1.75]" />
               </div>
               <div className="flex flex-col">
-                <span className="font-serif text-2xl font-bold tracking-tight text-white">
-                  {SITE_CONFIG.name}
-                </span>
-                <span className="text-[10px] tracking-widest uppercase font-sans text-[#C89D66]">
+                <div className="flex items-baseline gap-1.5 leading-none">
+                  <span className="font-serif text-2xl font-semibold tracking-tight text-white">
+                    Anto's Comfort
+                  </span>
+                  <span className="font-serif italic text-2xl font-semibold text-[#C89D66]">
+                    Residence
+                  </span>
+                </div>
+                <span className="text-[10px] tracking-[0.18em] uppercase font-sans text-[#C89D66] font-medium mt-1">
                   Cottage & Nature Stay
                 </span>
               </div>
