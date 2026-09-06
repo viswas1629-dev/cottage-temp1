@@ -80,20 +80,24 @@ export const Navbar: React.FC = () => {
             </div>
             <div className="flex flex-col min-w-0 justify-center">
               <div className="flex items-baseline gap-1 sm:gap-1.5 leading-none">
-                <span className={`font-serif text-[14.5px] xs:text-[16px] sm:text-lg md:text-xl lg:text-[1.75rem] font-semibold tracking-tight ${
-                  isScrolled || (!isHomePage && !mobileMenuOpen) ? 'text-[#15291E]' : 'text-white'
+                <span className={`font-serif text-[15px] xs:text-[17px] sm:text-lg md:text-xl lg:text-[1.75rem] font-bold sm:font-semibold tracking-tight ${
+                  isScrolled || (!isHomePage && !mobileMenuOpen)
+                    ? 'text-[#15291E]'
+                    : 'text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.45)]'
                 }`}>
                   Anto's Comfort
                 </span>
-                <span className={`font-serif italic text-[14.5px] xs:text-[16px] sm:text-lg md:text-xl lg:text-[1.75rem] font-semibold ${
-                  isScrolled || (!isHomePage && !mobileMenuOpen) ? 'text-[#C89D66]' : 'text-[#E5BE84]'
+                <span className={`font-serif italic text-[15px] xs:text-[17px] sm:text-lg md:text-xl lg:text-[1.75rem] font-bold sm:font-semibold ${
+                  isScrolled || (!isHomePage && !mobileMenuOpen)
+                    ? 'text-[#C89D66]'
+                    : 'text-[#F5D8A6] drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)]'
                 }`}>
                   Residence
                 </span>
               </div>
 
-              <span className={`text-[8px] xs:text-[8.5px] sm:text-[9.5px] tracking-[0.18em] uppercase font-sans mt-0.5 font-medium truncate ${
-                isScrolled || (!isHomePage && !mobileMenuOpen) ? 'text-[#6E7771]' : 'text-white/75'
+              <span className={`text-[8px] xs:text-[9px] sm:text-[9.5px] tracking-[0.18em] uppercase font-sans mt-0.5 font-medium truncate ${
+                isScrolled || (!isHomePage && !mobileMenuOpen) ? 'text-[#6E7771]' : 'text-white/85'
               }`}>
                 Cottage & Nature Stay
               </span>
