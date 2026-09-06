@@ -38,23 +38,23 @@ export const Navbar: React.FC = () => {
   const getHeaderBackground = () => {
     if (mobileMenuOpen) return 'bg-[#0F1D15] text-[#FAF7F2] border-b border-white/10';
     if (isScrolled) {
-      return 'bg-[#FAF7F2]/95 backdrop-blur-md text-[#1C201D] shadow-md border-b border-[#EAE2D5] py-3';
+      return 'bg-[#173F2B]/95 backdrop-blur-md text-[#173F2B] shadow-md border-b border-[#EAE2D5] py-3';
     }
     if (isHomePage) {
       return 'bg-gradient-to-b from-black/70 via-black/30 to-transparent text-[#FAF7F2] py-5';
     }
-    return 'bg-[#FAF7F2] text-[#1C201D] border-b border-[#EAE2D5] py-4';
+    return 'bg-[#173F2B] text-[#1C201D] border-b border-[#EAE2D5] py-4';
   };
 
   const getTextColor = (path: string) => {
     const isActive = location.pathname === path;
     if (isScrolled || !isHomePage) {
       return isActive
-        ? 'text-[#15291E] font-semibold border-b-2 border-[#15291E]'
-        : 'text-[#3D4540] hover:text-[#15291E]';
+        ? 'text-[#FAF7F2] font-semibold border-b-2 border-[#15291E]'
+        : 'text-[#FAF7F2]/80 hover:text-[#15291E]';
     }
     return isActive
-      ? 'text-white font-semibold border-b-2 border-[#C89D66]'
+      ? 'text-white font-semibold border-b-2 border-[#6caca0]'
       : 'text-[#FAF7F2]/80 hover:text-white';
   };
 
@@ -73,7 +73,7 @@ export const Navbar: React.FC = () => {
           >
             <div className={`p-1.5 sm:p-2 rounded-full transition-transform duration-300 group-hover:scale-105 flex-shrink-0 ${
               isScrolled || (!isHomePage && !mobileMenuOpen)
-                ? 'bg-[#15291E] text-[#FAF7F2]'
+                ? 'bg-[#64395f] text-[#FAF7F2]'
                 : 'bg-white/10 text-white backdrop-blur-sm border border-white/20'
             }`}>
               <Compass className="w-4 h-4 sm:w-5 sm:h-5 stroke-[1.75]" />
@@ -82,22 +82,22 @@ export const Navbar: React.FC = () => {
               <div className="flex items-baseline gap-1 sm:gap-1.5 leading-none">
                 <span className={`font-serif text-[15px] xs:text-[17px] sm:text-lg md:text-xl lg:text-[1.75rem] font-bold sm:font-semibold tracking-tight ${
                   isScrolled || (!isHomePage && !mobileMenuOpen)
-                    ? 'text-[#15291E]'
-                    : 'text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.45)]'
+                    ? 'text-[#6caca0]'
+                    : 'text-[#6caca0] drop-shadow-[0_1px_2px_rgba(0,0,0,0.45)]'
                 }`}>
                   Anto's Comfort
                 </span>
                 <span className={`font-serif italic text-[15px] xs:text-[17px] sm:text-lg md:text-xl lg:text-[1.75rem] font-bold sm:font-semibold ${
                   isScrolled || (!isHomePage && !mobileMenuOpen)
-                    ? 'text-[#C89D66]'
-                    : 'text-[#F5D8A6] drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)]'
+                    ? 'text-[#c075b7]'
+                    : 'text-[#c075b7] drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)]'
                 }`}>
                   Residence
                 </span>
               </div>
 
               <span className={`text-[8px] xs:text-[9px] sm:text-[9.5px] tracking-[0.18em] uppercase font-sans mt-0.5 font-medium truncate ${
-                isScrolled || (!isHomePage && !mobileMenuOpen) ? 'text-[#6E7771]' : 'text-white/85'
+                isScrolled || (!isHomePage && !mobileMenuOpen) ? 'text-[#FAF7F2]' : 'text-white/85'
               }`}>
                 Cottage & Nature Stay
               </span>
@@ -124,8 +124,8 @@ export const Navbar: React.FC = () => {
               aria-label="Call +91 93449 50030"
               className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold tracking-wide transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer ${
                 isScrolled || !isHomePage
-                  ? 'bg-[#15291E] text-[#FAF7F2] hover:bg-[#1D3829] border border-[#274B37]'
-                  : 'bg-[#C89D66] text-[#15291E] hover:bg-[#D8AE77] font-semibold'
+                  ? 'bg-[#c075b7] text-[#FAF7F2] hover:bg-[#1D3829] border border-[#274B37]'
+                  : 'bg-[#6caca0] text-[#15291E] hover:bg-[#D8AE77] font-semibold'
               }`}
             >
               <Phone className="w-3.5 h-3.5 flex-shrink-0" />
@@ -140,8 +140,8 @@ export const Navbar: React.FC = () => {
               aria-label="Call +91 93449 50030"
               className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold transition-all shadow-sm ${
                 isScrolled || (!isHomePage && !mobileMenuOpen)
-                  ? 'bg-[#15291E] text-[#FAF7F2]'
-                  : 'bg-[#C89D66] text-[#15291E]'
+                  ? 'bg-[#c075b7] text-[#FAF7F2]'
+                  : 'bg-[#6caca0] text-[#15291E]'
               }`}
             >
               <Phone className="w-3.5 h-3.5 flex-shrink-0" />

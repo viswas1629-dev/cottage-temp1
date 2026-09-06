@@ -17,14 +17,14 @@ const HERO_SLIDES: HeroSlide[] = [
   {
     id: "slide-1",
     image: cotaFronts1,
-    title: "A Quiet Escape Into Nature.",
-    subtitle: "☀️🌳",
+    title: "Welcome to Anto’s Comfort Residence",
+    subtitle: "❤️😌",
   },
   {
     id: "slide-2",
     image: cotaBacks2,
-    title: "Timeless Comfort in the Hills.",
-    subtitle: "🗻😌",
+    title: "A Quiet Escape Into Nature.",
+    subtitle: "☀️🌳",
   },
   {
     id: "slide-3",
