@@ -74,15 +74,15 @@ Thank you.`;
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#15291E]/5 text-[#15291E] text-xs font-mono font-medium border border-[#15291E]/10">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#15291E]/5 text-[#15291E] text-sm font-semibold font-medium border border-[#15291E]/10">
             <MessageCircle className="w-3.5 h-3.5 text-[#C89D66]" />
             <span>Location, Directions & Reservations</span>
           </div>
-          <h1 className="font-serif text-4xl sm:text-6xl font-normal text-[#1714b8]">
+          <h1 className="font-serif text-3xl font-bold text-[#3534FB] block sm:text-4xl lg:text-5xl leading-tight">
             Contact & Directions
           </h1>
-          <p className="text-base text-[#3D4540] font-sans font-light leading-relaxed">
-            Perched at 7,200 feet in Kodaikanal. Have questions about room availability, directions, transport pick-up, or stay dates? Contact our team directly.
+          <p className="text-base text-[#000000] font-semibold font-light leading-relaxed">
+            You Have any questions about room availability, directions, transport pick-up, or stay dates? Contact our team directly.
           </p>
         </div>
 
@@ -93,16 +93,16 @@ Thank you.`;
           <div className="lg:col-span-5 space-y-6">
 
             <div className="bg-white p-8 rounded-3xl border border-[#EAE2D5] space-y-6 shadow-xs">
-              <h3 className="font-serif text-2xl font-semibold text-[#3534FB]">
+              <h3 className="font-serif text-3xl font-bold text-[#3534FB] block">
                 Contact & Address
               </h3>
 
-              <div className="space-y-4 text-xs sm:text-sm text-[#3D4540]">
+              <div className="space-y-4 text-xs sm:text-lg text-[#3D4540]">
                 <div className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-[#C89D66] flex-shrink-0 mt-0.5" />
                   <div>
-                    <h4 className="font-semibold text-[#1C201D]">Property Address</h4>
-                    <p className="text-[#6E7771] font-light mt-0.5">{SITE_CONFIG.location.address}</p>
+                    <h4 className="font-bold text-[#000000]">Property Address</h4>
+                    <p className="text-[#000000] font-semibold mt-0.5">{SITE_CONFIG.location.address}</p>
                     <p className="text-[11px] text-[#C89D66] font-medium mt-1">{SITE_CONFIG.location.landmark}</p>
                   </div>
                 </div>
@@ -110,8 +110,8 @@ Thank you.`;
                 <div className="flex items-start gap-3 pt-3 border-t border-[#EAE2D5]">
                   <Phone className="w-5 h-5 text-[#C89D66] flex-shrink-0 mt-0.5" />
                   <div>
-                    <h4 className="font-semibold text-[#1C201D]">Phone / WhatsApp</h4>
-                    <a href={`tel:${SITE_CONFIG.phone}`} className="text-[#15291E] font-medium hover:underline">
+                    <h4 className="font-bold text-[#000000]">Phone / WhatsApp</h4>
+                    <a href={`tel:${SITE_CONFIG.phone}`} className="text-[#15291E] font-semibold hover:underline">
                       {SITE_CONFIG.whatsappDisplay}
                     </a>
                   </div>
@@ -120,8 +120,8 @@ Thank you.`;
                 <div className="flex items-start gap-3 pt-3 border-t border-[#EAE2D5]">
                   <Mail className="w-5 h-5 text-[#C89D66] flex-shrink-0 mt-0.5" />
                   <div>
-                    <h4 className="font-semibold text-[#1C201D]">Email Address</h4>
-                    <a href={`mailto:${SITE_CONFIG.email}`} className="text-[#15291E] font-medium hover:underline">
+                    <h4 className="font-bold text-[#000000]">Email Address</h4>
+                    <a href={`mailto:${SITE_CONFIG.email}`} className="text-[#15291E] font-semibold hover:underline">
                       {SITE_CONFIG.email}
                     </a>
                   </div>
@@ -171,10 +171,10 @@ Thank you.`;
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
-                  <h2 className="font-serif text-3xl font-semibold text-[#3534FB]">
+                  <h2 className="font-serif text-3xl font-bold text-[#3534FB] block">
                     Send an Online Enquiry
                   </h2>
-                  <p className="text-xs text-[#6E7771] font-sans font-light">
+                  <p className="text-sm text-[#000000] font-semibold font-light">
                     Fill out your details below to generate a pre-filled WhatsApp enquiry for our host team.
                   </p>
                 </div>
@@ -188,7 +188,7 @@ Thank you.`;
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1">
-                    <label className="text-xs font-medium text-[#1C201D]">Full Name *</label>
+                    <label className="text-sm font-medium text-[#000000]">Full Name *</label>
                     <input
                       type="text"
                       placeholder="e.g. Rahul Sharma"
@@ -199,7 +199,7 @@ Thank you.`;
                   </div>
 
                   <div className="space-y-1">
-                    <label className="text-xs font-medium text-[#1C201D]">Phone / WhatsApp Number *</label>
+                    <label className="text-sm font-medium text-[#000000]">Phone / WhatsApp Number *</label>
                     <input
                       type="tel"
                       placeholder="+91 99999 99999"
@@ -212,7 +212,7 @@ Thank you.`;
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1">
-                    <label className="text-xs font-medium text-[#1C201D]">Email Address</label>
+                    <label className="text-sm font-medium text-[#000000]">Email Address</label>
                     <input
                       type="email"
                       placeholder="name@example.com (optional)"
@@ -223,7 +223,7 @@ Thank you.`;
                   </div>
 
                   <div className="space-y-1">
-                    <label className="text-xs font-medium text-[#1C201D]">Bedroom Preference</label>
+                    <label className="text-sm font-medium text-[#000000]">Bedroom Preference</label>
                     <select
                       value={formData.roomInterest}
                       onChange={(e) => setFormData({ ...formData, roomInterest: e.target.value })}
@@ -237,7 +237,7 @@ Thank you.`;
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-xs font-medium text-[#1C201D]">Intended Dates / Message *</label>
+                  <label className="text-sm font-medium text-[#000000]">Intended Dates / Message *</label>
                   <textarea
                     rows={4}
                     placeholder="Provide preferred check-in dates and number of guests..."
@@ -271,9 +271,9 @@ Thank you.`;
           <div className="bg-white p-8 rounded-3xl border border-[#15291E] space-y-4 shadow-xs">
             <div className="flex items-center gap-3">
               <Sun className="w-6 h-6 text-[#C89D66]" />
-              <h3 className="font-serif text-2xl font-semibold text-[#3534FB]">Best Time to Visit</h3>
+              <h3 className="font-serif text-4xl font-semibold text-[#3534FB]">Best Time to Visit</h3>
             </div>
-            <p className="text-xs sm:text-sm text-[#000000] font-sans font-light leading-relaxed">
+            <p className="text-sm sm:text-base text-[#000000] font-semibold font-light leading-relaxed">
               Kodaikanal enjoys pleasant, crisp weather throughout the year. Spring & Summer (September to May) bring clear skies and cool breezes (15°C to 20°C). Monsoon season (June to August) paints the mountains in vibrant emerald hues with misty rain and cascading waterfalls.
             </p>
           </div>
@@ -281,16 +281,16 @@ Thank you.`;
           <div className="bg-white p-8 rounded-3xl border border-[#15291E] space-y-4 shadow-xs">
             <div className="flex items-center gap-3">
               <CloudRain className="w-6 h-6 text-[#C89D66]" />
-              <h3 className="font-serif text-2xl font-semibold text-[#3534FB]">Pick-up & Transfer Assistance</h3>
+              <h3 className="font-serif text-4xl font-semibold text-[#3534FB]">Pick-up & Transfer Assistance</h3>
             </div>
-            <p className="text-xs sm:text-sm text-[#000000] font-sans font-light leading-relaxed">
+            <p className="text-sm sm:text-base text-[#000000] font-semibold font-light leading-relaxed">
               We can arrange private chauffeured car pick-up services from Madurai Airport, Coimbatore Airport, or Kodai Road Railway Station directly to our cottage gates upon request.
             </p>
             <div className="pt-2">
               <WhatsAppButton
                 customMessage="Hello, I would like to enquire about transport pick-up assistance for my trip to Kodai Haven."
                 label="Enquire for Taxi Transfer"
-                size="sm"
+                size="lg"
                 variant="outline"
               />
             </div>

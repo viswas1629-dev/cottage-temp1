@@ -11,14 +11,14 @@ export const About: React.FC = () => {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#15291E]/5 text-[#15291E] text-xs font-mono font-medium border border-[#15291E]/10">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#15291E]/5 text-[#15291E] text-sm font-semibold font-medium border border-[#15291E]/10">
             <Compass className="w-3.5 h-3.5 text-[#C89D66]" />
             <span>Our Story & Philosophy</span>
           </div>
-          <h1 className="font-serif text-4xl sm:text-6xl font-normal text-[#3534FB]">
+          <h1 className="font-serif text-3xl font-bold text-[#3534FB] block sm:text-4xl lg:text-5xl leading-tight">
             Crafted for Peace, Privacy & Nature
           </h1>
-          <p className="text-base text-[#3D4540] font-sans font-light leading-relaxed">
+          <p className="text-base text-[#000000] font-semibold font-light leading-relaxed">
             Anto's Comfort Residence was born out of a desire to create a true mountain sanctuary — where human architecture blends seamlessly into the surrounding pine canopy.
           </p>
         </div>
@@ -26,13 +26,13 @@ export const About: React.FC = () => {
         {/* Story Section */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-white p-8 sm:p-12 rounded-3xl border border-[#EAE2D5] shadow-sm">
           <div className="lg:col-span-6 space-y-6">
-            <h2 className="font-serif text-3xl sm:text-4xl font-normal text-[#3534FB]">
+            <h2 className="font-serif text-3xl font-bold text-[#3534FB] block sm:text-4xl lg:text-5xl leading-tight">
               Building Without Distributing the Forest
             </h2>
-            <p className="text-sm sm:text-base text-[#000000] font-sans font-light leading-relaxed">
+            <p className="text-sm sm:text-base text-[#000000] font-sans font-semibold leading-relaxed">
               When we first walked through this hillside parcel in Kodaikanal, we made a strict promise: not a single mature pine tree would be felled. Instead, our cottage were meticulously positioned around the natural contours of the rocks and trees.
             </p>
-            <p className="text-s text-[#000000] font-sans font-light leading-relaxed">
+            <p className="text-sm sm:text-base text-[#000000] font-sans font-semibold leading-relaxed">
               Every stone used in our hearth fireplaces was reclaimed from local river beds, and all timber panelling is sourced from sustainable cedar plantations. The result is an accommodation that feels like it has organically belonged to the mountain for decades.
             </p>
           </div>
@@ -50,24 +50,24 @@ export const About: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="p-8 bg-white rounded-2xl border border-[#15291E] space-y-4">
             <Shield className="w-8 h-8 text-[#C89D66]" />
-            <h3 className="font-serif text-2xl font-semibold text-[#3534FB]">Absolute Privacy</h3>
-            <p className="text-sm text-[#000000] font-sans font-light leading-relaxed">
+            <h3 className="font-serif text-4xl font-semibold text-[#3534FB]">Absolute Privacy</h3>
+            <p className="text-sm text-[#000000] font-semibold font-light leading-relaxed">
               Each cottage maintains wide buffer zones of native flora, ensuring complete visual and auditory privacy for every guest stay.
             </p>
           </div>
 
           <div className="p-8 bg-white rounded-2xl border border-[#15291E] space-y-4">
             <Heart className="w-8 h-8 text-[#C89D66]" />
-            <h3 className="font-serif text-2xl font-semibold text-[#3534FB]">Warm Hospitality</h3>
-            <p className="text-sm text-[#000000] font-sans font-light leading-relaxed">
+            <h3 className="font-serif text-4xl font-semibold text-[#3534FB]">Warm Hospitality</h3>
+            <p className="text-sm text-[#000000] font-semibold font-light leading-relaxed">
               Our small host team is dedicated to personal service — from lighting your evening fireplace to brewing fresh filter coffee at dawn.
             </p>
           </div>
 
           <div className="p-8 bg-white rounded-2xl border border-[#15291E] space-y-4">
             <Trees className="w-8 h-8 text-[#C89D66]" />
-            <h3 className="font-serif text-2xl font-semibold text-[#3534FB]">Eco-Conscious</h3>
-            <p className="text-sm text-[#000000] font-sans font-light leading-relaxed">
+            <h3 className="font-serif text-4xl font-semibold text-[#3534FB]">Eco-Conscious</h3>
+            <p className="text-sm text-[#000000] font-semibold font-light leading-relaxed">
               Rainwater harvesting, solar water heating, zero single-use plastics, and organic waste composting on property grounds.
             </p>
           </div>
