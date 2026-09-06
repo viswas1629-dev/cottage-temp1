@@ -29,16 +29,16 @@ export const Home: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
           <div className="lg:col-span-6 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#15291E]/5 text-[#15291E] text-xs font-mono font-medium border border-[#15291E]/10">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#15291E]/5 text-[#15291E] text-xs font-semibold font-medium border border-[#15291E]/10">
               <Compass className="w-3.5 h-3.5 text-[#C89D66]" />
               <span>Welcome to Anto's Comfort Residence </span>
             </div>
 
-            <h2 className="font-serif text-3xl sm:text-5xl font-normal leading-[1.15] text-[#1714b8]">
+            <h2 className="font-serif text-3xl font-bold text-[#3534FB] block sm:text-4xl lg:text-5xl leading-tight">
               Comfort, Nature & Peace in Kodaikanal.
             </h2>
 
-            <p className="text-base text-[#3D4540] font-sans font-light leading-relaxed">
+            <p className="text-base text-[#000000] font-semibold font-light leading-relaxed">
               Located in a beautiful and peaceful part of Kodaikanal, Anto's Comfort Residence offers a comfortable stay with refreshing views of the surrounding landscape. With a calm atmosphere, a safe and secure setting, and warm hospitality, we aim to make every stay simple, relaxing, and genuinely memorable.
             </p>
 
@@ -93,13 +93,13 @@ export const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-2xl mx-auto mb-14 space-y-3">
-            <span className="text-xs font-mono uppercase tracking-widest text-[#C89D66] font-medium">
+            <span className="text-sm font-semibold uppercase tracking-widest text-[#C89D66] font-medium">
               OUR ACCOMMODATION
             </span>
-            <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#1714b8]">
+            <h2 className="font-serif text-3xl font-bold text-[#3534FB] block sm:text-4xl lg:text-5xl leading-tight">
               Choose Your Bedroom
             </h2>
-            <p className="text-sm text-[#3D4540] font-sans font-light leading-relaxed">
+            <p className="text-sm text-[#000000] font-semibold font-light leading-relaxed">
               Choose the bedroom type that best suits your stay and enquire with us directly on WhatsApp.
             </p>
           </div>
@@ -117,13 +117,13 @@ export const Home: React.FC = () => {
       {/* 4. The Anto's Comfort Residence Experience */}
       <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <span className="text-xs font-mono uppercase tracking-widest text-[#C89D66] font-medium">
+          <span className="text-sm font-semibold uppercase tracking-widest text-[#C89D66] font-medium">
             THE ANTO'S COMFORT RESIDENCE EXPERIENCE
           </span>
-          <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#1714b8]">
+          <h2 className="font-serif text-3xl font-bold text-[#3534FB] block sm:text-4xl lg:text-5xl leading-tight">
             Comfortable Stay, Peaceful Moments.
           </h2>
-          <p className="text-sm sm:text-base text-[#3D4540] font-sans font-light leading-relaxed">
+          <p className="text-sm sm:text-base text-[#000000] font-semibold font-light leading-relaxed">
             At Anto's Comfort Residence, we focus on giving you a clean, comfortable and peaceful stay in Kodaikanal. From well-maintained rooms and clean bathrooms to a safe environment and convenient facilities, we make your stay simple and comfortable.
           </p>
         </div>
@@ -187,13 +187,13 @@ export const Home: React.FC = () => {
       <section id="experiences" className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div className="space-y-3 max-w-2xl">
-            <span className="text-xs font-mono uppercase tracking-widest text-[#C89D66] font-medium">
+            <span className="text-sm font-semibold uppercase tracking-widest text-[#C89D66] font-medium">
               CURATED ACTIVITIES
             </span>
-            <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#1714b8]">
+            <h2 className="font-serif text-3xl font-bold text-[#3534FB] block sm:text-4xl lg:text-5xl leading-tight">
               Experiences at Anto's Comfort Residence
             </h2>
-            <p className="text-sm text-[#3D4540] font-sans font-light">
+            <p className="text-sm text-[#000000] font-semibold font-light">
               Enjoy peaceful fireside evenings, scenic mountain drives, and authentic local meals during your stay.
             </p>
           </div>
@@ -307,10 +307,10 @@ export const Home: React.FC = () => {
       <section className="py-20 bg-[#F4EFE6] border-y border-[#EAE2D5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12 space-y-3">
-            <span className="text-xs font-mono uppercase tracking-widest text-[#C89D66] font-medium">
+            <span className="text-sm font-semibold uppercase tracking-widest text-[#C89D66] font-medium">
               Visual Journey
             </span>
-            <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#1714b8]">
+            <h2 className="font-serif text-3xl font-bold text-[#3534FB] block sm:text-4xl lg:text-5xl leading-tight">
               Moments at Anto's Comfort Residence
             </h2>
           </div>
@@ -350,13 +350,13 @@ export const Home: React.FC = () => {
       {/* 9. Final WhatsApp CTA Banner */}
       <section className="py-20 bg-[#FAF7F2] border-t border-[#EAE2D5]">
         <div className="max-w-4xl mx-auto px-4 text-center space-y-6">
-          <span className="text-xs font-mono uppercase tracking-widest text-[#C89D66] font-medium">
+          <span className="text-sm font-semibold uppercase tracking-widest text-[#C89D66] font-medium">
             Plan Your Stay
           </span>
-          <h2 className="font-serif text-4xl sm:text-6xl font-normal text-[#1714b8]">
+          <h2 className="font-serif text-3xl font-bold text-[#3534FB] block sm:text-4xl lg:text-5xl leading-tight">
             Ready for a Quiet Escape into Nature?
           </h2>
-          <p className="text-base text-[#3D4540] font-sans font-light max-w-xl mx-auto">
+          <p className="text-base text-[#000000] font-semibold font-light max-w-xl mx-auto">
             Contact us directly on WhatsApp to check live availability, discuss room features, or reserve your stay.
           </p>
           <div className="pt-4 flex justify-center">
