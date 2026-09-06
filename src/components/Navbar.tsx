@@ -62,7 +62,7 @@ export const Navbar: React.FC = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out ${getHeaderBackground()}`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-10">
         <div className="flex items-center justify-between">
           
           {/* Brand Logo */}
@@ -78,30 +78,44 @@ export const Navbar: React.FC = () => {
             }`}>
               <Compass className="w-4 h-4 sm:w-5 sm:h-5 stroke-[1.75]" />
             </div>
-            <div className="flex flex-col min-w-0 justify-center">
-              <div className="flex items-baseline gap-1 sm:gap-1.5 leading-none">
-                <span className={`font-serif text-[15px] xs:text-[17px] sm:text-lg md:text-xl lg:text-[1.75rem] font-bold sm:font-semibold tracking-tight ${
-                  isScrolled || (!isHomePage && !mobileMenuOpen)
-                    ? 'text-[#6caca0]'
-                    : 'text-[#6caca0] drop-shadow-[0_1px_2px_rgba(0,0,0,0.45)]'
-                }`}>
-                  Anto's Comfort
-                </span>
-                <span className={`font-serif italic text-[15px] xs:text-[17px] sm:text-lg md:text-xl lg:text-[1.75rem] font-bold sm:font-semibold ${
-                  isScrolled || (!isHomePage && !mobileMenuOpen)
-                    ? 'text-[#c075b7]'
-                    : 'text-[#c075b7] drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)]'
-                }`}>
-                  Residence
-                </span>
-              </div>
+<div className="flex flex-col min-w-0 justify-center">
+  <div className="relative flex items-start min-w-0 leading-none">
 
-              <span className={`text-[8px] xs:text-[9px] sm:text-[9.5px] tracking-[0.18em] uppercase font-sans mt-0.5 font-medium truncate ${
-                isScrolled || (!isHomePage && !mobileMenuOpen) ? 'text-[#FAF7F2]' : 'text-white/85'
-              }`}>
-                Cottage & Nature Stay
-              </span>
-            </div>
+    {/* Main Brand Name */}
+    <span
+      className={`font-serif text-3xl font-bold block sm:text-4xl lg:text-5xl leading-tight min-w-0 ${
+        isScrolled || (!isHomePage && !mobileMenuOpen)
+          ? 'text-[#6caca0]'
+          : 'text-[#6caca0] drop-shadow-[0_1px_2px_rgba(0,0,0,0.45)]'
+      }`}
+    >
+      ANTO'S COMFORT
+    </span>
+
+    {/* Residence */}
+    <span
+      className={`font-serif italic text-[15px] xs:text-[17px] sm:text-lg md:text-xl lg:text-[2.25rem] font-bold sm:font-semibold flex-shrink-0 ml-1 sm:ml-1.5 mt-0.5 ${
+        isScrolled || (!isHomePage && !mobileMenuOpen)
+          ? 'text-[#c075b7]'
+          : 'text-[#c075b7] drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)]'
+      }`}
+    >
+      Residence
+    </span>
+
+  </div>
+
+  {/* Subtitle */}
+  <span
+    className={`text-[8px] xs:text-[9px] sm:text-[9.5px] tracking-[0.18em] uppercase font-sans mt-0.5 font-medium truncate ${
+      isScrolled || (!isHomePage && !mobileMenuOpen)
+        ? 'text-[#FAF7F2]'
+        : 'text-white/85'
+    }`}
+  >
+    Cottage & Nature Stay
+  </span>
+</div>
           </Link>
 
           {/* Desktop Navigation Links */}
