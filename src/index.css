@@ -78,3 +78,7 @@
 .animate-pulse-glow {
   animation: pulseGlow 4s ease-in-out infinite;
 }
+
+.font-mermaid {
+  font-family: 'Mermaid', serif;
+}
