@@ -64,7 +64,7 @@ export const Footer: React.FC = () => {
               <div className="flex flex-col">
                 <div className="flex items-baseline gap-1.5 leading-none">
                   <span className="font-serif text-2xl font-semibold tracking-tight text-white">
-                    Anto's Comfort
+                    Anto's
                   </span>
                   <span className="font-serif italic text-2xl font-semibold text-[#C89D66]">
                     Residence
